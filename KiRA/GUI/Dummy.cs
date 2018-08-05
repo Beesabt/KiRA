@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace KiRA
+namespace KiRA.GUI
 {
-    public partial class Form1 : Form
+    public partial class Dummy : Form
     {
-        public Form1()
+        public Dummy()
         {
             InitializeComponent();
         }
