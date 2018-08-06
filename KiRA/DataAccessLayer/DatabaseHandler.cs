@@ -11,7 +11,10 @@ namespace KiRA.DataAccessLayer
 
         public DatabaseHandler()
         {
-            sqlite = new SQLiteConnection(@"Data Source = C:\users\eszti\documents\visual studio 2015\Projects\KiRA\KiRA\ApplicationFiles\DataBase\KiRA_Database.db; Version = 3;");
+            string executable = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            string path = (System.IO.Path.GetDirectoryName(executable));
+            AppDomain.CurrentDomain.SetData("DataDirectory", path);
+            sqlite = new SQLiteConnection(@"Data Source = |DataDirectory|\ApplicationFiles\DataBase\KiRA_Database.db; Version = 3;");
         }
 
 
