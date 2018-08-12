@@ -1,5 +1,7 @@
 ﻿using KiRA.BusinessLogicLayer;
 using System;
+using System.Reflection;
+using System.Resources;
 using System.Windows.Forms;
 
 
@@ -49,36 +51,16 @@ namespace KiRA.GUI
                     return;
                 }
 
-                Dummy dummy = new Dummy();
+                HomePage _homepage = new HomePage();
                 LogInfo.UserName = tbUsername.Text;
                 Hide();
-                dummy.Show();
+                _homepage.Show();
             }
             catch (Exception error)
             {
                 MessageBox.Show(error.Message + "\r\n\r\n" + error.GetBaseException().ToString(), error.GetType().ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);              
             }
-        }
-
-        private void btnLang_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                LogInfo.Language = btnLang.Text;
-                if (btnLang.Text == BusinessLogicLayer.Texts.Languages.HUN)
-                {
-                    btnLang.Text = BusinessLogicLayer.Texts.Languages.ENG;
-                }
-                else
-                {
-                    btnLang.Text = BusinessLogicLayer.Texts.Languages.HUN;
-                }
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show(error.Message + "\r\n\r\n" + error.GetBaseException().ToString(), error.GetType().ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        }      
 
         private void btnExit_Click(object sender, EventArgs e)
         {

@@ -8,6 +8,8 @@ namespace KiRA.DataAccessLayer
     class DatabaseHandler
     {
         private SQLiteConnection sqlite;
+        string _sResult = string.Empty;
+        int _iResult = 0;
 
         public DatabaseHandler()
         {
@@ -20,8 +22,7 @@ namespace KiRA.DataAccessLayer
 
         private int ExecuteScalar(string command)
         {
-            int _result = 0;
-
+           
             try
             {
                 SQLiteCommand cmd;
@@ -30,7 +31,7 @@ namespace KiRA.DataAccessLayer
                 sqlite.Open();
                 var obj = cmd.ExecuteScalar();
                 if (obj == null) { return 0; }
-                _result = Convert.ToInt32(obj);
+                _iResult = Convert.ToInt32(obj);
             }
             catch (SQLiteException error)
             {
@@ -38,7 +39,35 @@ namespace KiRA.DataAccessLayer
                 sqlite.Close();
             }
             sqlite.Close();
-            return _result;
+            return _iResult;
+        }
+
+        private string GetString(string command)
+        {
+           
+            try
+            {
+                SQLiteCommand cmd;
+                cmd = sqlite.CreateCommand();
+                cmd.CommandText = command;
+                sqlite.Open();
+                var obj = cmd.ExecuteScalar();
+                if (obj == null || string.IsNullOrEmpty(obj.ToString()))
+                {
+                    return string.Empty;
+                }
+                else
+                {
+                    _sResult = obj.ToString();
+                }
+            }
+            catch (SQLiteException error)
+            {
+                MessageBox.Show(error.Message);
+                sqlite.Close();
+            }
+            sqlite.Close();
+            return _sResult;         
         }
 
 
@@ -55,12 +84,24 @@ namespace KiRA.DataAccessLayer
 
         public int GetUserID(string Username, string Password)
         {
-            int _result = 0;
             string cmd = string.Format("SELECT {0} FROM {1} WHERE {2}='{3}' AND {4}='{5}'", BusinessLogicLayer.Texts.PersonProperties.ID, BusinessLogicLayer.Texts.DataTableNames.Person,
                  BusinessLogicLayer.Texts.PersonProperties.Username, Username, BusinessLogicLayer.Texts.PersonProperties.Password, Password);
-            _result = ExecuteScalar(cmd);
-            return _result;
+            _iResult = ExecuteScalar(cmd);
+            return _iResult;
         }
+
+        #endregion
+
+        #region Home.cs
+
+        public string GetPassword(string Username)
+        {
+            string cmd = string.Format("SELECT {0} FROM {1} WHERE {2}='{3}'", BusinessLogicLayer.Texts.PersonProperties.Password, BusinessLogicLayer.Texts.DataTableNames.Person,
+                 BusinessLogicLayer.Texts.PersonProperties.Username, Username);
+            _sResult = GetString(cmd);
+            return _sResult;
+        }
+
         #endregion
     }
 }

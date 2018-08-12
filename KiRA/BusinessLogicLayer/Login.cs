@@ -14,6 +14,7 @@ namespace KiRA.BusinessLogicLayer
             if (isSuccess)
             {
                 LogInfo.UserID = _DBHandler.GetUserID(Username, Password).ToString();
+                LogInfo.UserName = Username;
             }
             return isSuccess;
         }

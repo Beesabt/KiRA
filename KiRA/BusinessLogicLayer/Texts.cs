@@ -4,7 +4,7 @@
     {
 
         public static class DataTableNames
-        {        
+        {
             public static string Person
             {
                 get { return "Person"; }
@@ -83,7 +83,7 @@
                 get { return "HealthDamage"; }
             }
         }
-       
+
         public static class ErrorMessages
         {
 
@@ -91,8 +91,7 @@
             {
                 get
                 {
-                    if (LogInfo.Language == "HUN") { return "Nem megfelelő felhasználónév vagy jelszó."; }
-                    else { return "Username or password is wrong."; }
+                    return "Username or password is wrong.";
                 }
             }
 
@@ -100,8 +99,15 @@
             {
                 get
                 {
-                    if (LogInfo.Language == "HUN") { return " mező üres."; }
-                    else { return " field is empty."; }
+                    return " field is empty.";
+                }
+            }
+
+            public static string DefaultUsernameOrPassword
+            {
+                get
+                {
+                    return "You use default username or password, please change it in the Settings.\nThis message appears until you change the default login parameters.";
                 }
             }
 
@@ -114,8 +120,7 @@
             {
                 get
                 {
-                    if (LogInfo.Language == "HUN") { return "Bejelentkezés sikertelen"; }
-                    else { return "Login failed"; }
+                    return "Login failed";
                 }
             }
 
@@ -124,22 +129,16 @@
             {
                 get
                 {
-                    if (LogInfo.Language == "HUN") { return "Üres kötelező mező"; }
-                    else { return "Empty reqired field"; }
+                    return "Empty reqired field";
                 }
-            }    
-        }
-
-        public static class Languages
-        {
-            public static string HUN
-            {
-                get { return "HUN"; }
             }
 
-            public static string ENG
+            public static string DefaultLoginParameters
             {
-                get { return "ENG"; }
+                get
+                {
+                    return "Default login parameters";
+                }
             }
         }
 

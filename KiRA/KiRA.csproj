@@ -69,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogicLayer\Home.cs" />
     <Compile Include="BusinessLogicLayer\Login.cs" />
     <Compile Include="BusinessLogicLayer\LogInfo.cs" />
     <Compile Include="BusinessLogicLayer\Texts.cs" />
@@ -79,6 +80,12 @@
     <Compile Include="GUI\Dummy.Designer.cs">
       <DependentUpon>Dummy.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HomePage.designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +95,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValueObjects\Person.cs" />
+    <EmbeddedResource Include="GUI\HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
