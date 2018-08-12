@@ -111,9 +111,76 @@
                 }
             }
 
+            public static string WrongOldPassword
+            {
+                get
+                {
+                   return "Old password is wrong.";
+                }
+            }
+
+            public static string WrongOldUsername
+            {
+                get
+                {
+                    return "Old username is wrong.";
+                }
+            }
+
+            public static string NewPasswordsMismatched
+            {
+                get
+                {
+                    return "The new passwords are mismatched.";
+                }
+            }
+
+            public static string NewUsernamesMismatched
+            {
+                get
+                {
+                    return "The new usernames are mismatched.";
+                }
+            }
+
         }
 
-        public static class Captions
+        public static class InformationMessages
+        {
+            public static string PasswordChanged
+            {
+                get
+                {
+                    return "Password changed successfully.";
+                }
+            }
+
+            public static string RulesOfNewPassword
+            {
+                get
+                {
+                    return "The new password must contain:\n- Capital and small letter\n- At least one number\n- Required long is 8 letters";
+                }
+            }
+
+            public static string UsernameChanged
+            {
+                get
+                {
+                    return "Username changed successfully.";
+                }
+            }
+
+            public static string PersonalInformationChanged
+            {
+                get
+                {
+                    return "Personal information changed successfully.";
+                }
+            }
+        }
+
+            public static class Captions
         {
 
             public static string LoginFailed
@@ -138,6 +205,38 @@
                 get
                 {
                     return "Default login parameters";
+                }
+            }
+
+            public static string WrongOldValue
+            {
+                get
+                {
+                    return "Wrong old value";
+                }
+            }
+
+            public static string MissmatchadPasswords
+            {
+                get
+                {
+                    return "Mismatched passwords";
+                }
+            }
+
+            public static string MissmatchadUsernames
+            {
+                get
+                {
+                    return "Mismatched usernames";
+                }
+            }
+
+            public static string SuccessfulChange
+            {
+                get
+                {
+                     return "Successful action";
                 }
             }
         }

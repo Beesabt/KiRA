@@ -44,25 +44,27 @@ namespace KiRA.GUI
         private void btnSettings_Click(object sender, EventArgs e)
         {
             Hide();
-            //SettingsPage _settingsPage = new SettingsPage();
-            //_settingsPage.Show();
+            SettingsPage _settingsPage = new SettingsPage();
+            _settingsPage.Show();
         }
 
         private void btnStatistics_Click(object sender, EventArgs e)
         {
-            Show();
+            //Hide();
+            //StatisticsPage _statisticsPage = new StatisticsPage();
+            //_statisticsPage.Show();
         }
 
         private void btnWorkingHours_Click(object sender, EventArgs e)
         {
-            Hide();
+            //Hide();
             //WorkingHoursPage _workingHoursPage = new WorkingHoursPage();
             //_workingHoursPage.Show();
         }
 
         private void btnHolidays_Click(object sender, EventArgs e)
         {
-            Hide();
+            //Hide();
             //HolidaysPage _holidaysPage = new HolidaysPage();
             //_holidaysPage.Show();
         }

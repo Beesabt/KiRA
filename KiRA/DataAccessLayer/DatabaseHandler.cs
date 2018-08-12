@@ -1,13 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
 using System.Windows.Forms;
+using KiRA.BusinessLogicLayer;
 
 namespace KiRA.DataAccessLayer
 {
     class DatabaseHandler
     {
-        private SQLiteConnection sqlite;
+        private SQLiteConnection _sqlite;
+        DataTable _dataTable;
+        SQLiteDataAdapter _dataAdapter;
         string _sResult = string.Empty;
         int _iResult = 0;
 
@@ -16,19 +20,19 @@ namespace KiRA.DataAccessLayer
             string executable = System.Reflection.Assembly.GetExecutingAssembly().Location;
             string path = (System.IO.Path.GetDirectoryName(executable));
             AppDomain.CurrentDomain.SetData("DataDirectory", path);
-            sqlite = new SQLiteConnection(@"Data Source = |DataDirectory|\ApplicationFiles\DataBase\KiRA_Database.db; Version = 3;");
+            _sqlite = new SQLiteConnection(@"Data Source = |DataDirectory|\ApplicationFiles\DataBase\KiRA_Database.db; Version = 3;");
         }
 
 
         private int ExecuteScalar(string command)
         {
-           
+
             try
             {
                 SQLiteCommand cmd;
-                cmd = sqlite.CreateCommand();
+                cmd = _sqlite.CreateCommand();
                 cmd.CommandText = command;
-                sqlite.Open();
+                _sqlite.Open();
                 var obj = cmd.ExecuteScalar();
                 if (obj == null) { return 0; }
                 _iResult = Convert.ToInt32(obj);
@@ -36,21 +40,21 @@ namespace KiRA.DataAccessLayer
             catch (SQLiteException error)
             {
                 MessageBox.Show(error.Message);
-                sqlite.Close();
+                _sqlite.Close();
             }
-            sqlite.Close();
+            _sqlite.Close();
             return _iResult;
         }
 
         private string GetString(string command)
         {
-           
+
             try
             {
                 SQLiteCommand cmd;
-                cmd = sqlite.CreateCommand();
+                cmd = _sqlite.CreateCommand();
                 cmd.CommandText = command;
-                sqlite.Open();
+                _sqlite.Open();
                 var obj = cmd.ExecuteScalar();
                 if (obj == null || string.IsNullOrEmpty(obj.ToString()))
                 {
@@ -64,10 +68,65 @@ namespace KiRA.DataAccessLayer
             catch (SQLiteException error)
             {
                 MessageBox.Show(error.Message);
-                sqlite.Close();
+                _sqlite.Close();
             }
-            sqlite.Close();
-            return _sResult;         
+            _sqlite.Close();
+            return _sResult;
+        }
+
+        private bool Update(string tableName, Dictionary<string, string> data, string where, ref int updatedRows)
+        {
+            string vals = string.Empty;
+            bool returnCode = false;
+
+            try
+            {
+
+                if (data.Count >= 1)
+                {
+                    foreach (KeyValuePair<string, string> val in data)
+                    {
+                        vals += string.Format("{0}='{1}',", val.Key.ToString(), val.Value.ToString());
+                    }
+                    vals = vals.Substring(0, vals.Length - 1);
+                }
+                string command = string.Format("UPDATE {0} SET {1} WHERE {2}", tableName, vals, where);
+                SQLiteCommand cmd;
+                cmd = _sqlite.CreateCommand();
+                cmd.CommandText = command;
+                _sqlite.Open();
+                updatedRows = cmd.ExecuteNonQuery();
+                _sqlite.Close();
+            }
+            catch (SQLiteException error)
+            {
+                MessageBox.Show(error.Message);
+                _sqlite.Close();
+            }
+
+            if (updatedRows >= 0) returnCode = true;
+            return returnCode;
+        }
+
+        private DataTable GetDataTable(string command)
+        {
+            try
+            {
+                SQLiteCommand cmd;
+                cmd = _sqlite.CreateCommand();
+                cmd.CommandText = command;
+                _sqlite.Open();
+                _dataAdapter = new SQLiteDataAdapter(cmd);
+                _dataTable = new DataTable();
+                _dataAdapter.Fill(_dataTable);
+                _sqlite.Close();
+            }
+            catch (SQLiteException error)
+            {
+                MessageBox.Show(error.Message);
+                _sqlite.Close();
+            }
+            return _dataTable;
         }
 
 
@@ -100,6 +159,37 @@ namespace KiRA.DataAccessLayer
                  BusinessLogicLayer.Texts.PersonProperties.Username, Username);
             _sResult = GetString(cmd);
             return _sResult;
+        }
+
+        #endregion
+
+        #region Settings.cs
+
+        public bool OldValueValidationDB(string Key, string Value)
+        {
+            bool isSuccess = false;
+            string cmd = string.Format("SELECT COUNT({1}) FROM {0} WHERE {1}='{2}'", Texts.DataTableNames.Person, Key, Value);
+            if (ExecuteScalar(cmd) != 0) isSuccess = true;
+            return isSuccess;
+        }
+
+        public bool SetNewValueDB(Dictionary<string, string> data, string Key, string Value, int updatedRow)
+        {
+            bool isSuccess = false;
+            isSuccess = Update(Texts.DataTableNames.Person, data, string.Format("{0}='{1}'", Key, Value), ref updatedRow);
+            return isSuccess;
+        }
+        #endregion
+
+        #region Settings.cs and Holiday.cs
+
+        public DataTable GetPersonalInformationDB()
+        {
+            string cmd = string.Format("SELECT * FROM {0} WHERE {1}='{2}'", Texts.DataTableNames.Person, Texts.PersonProperties.ID,
+                LogInfo.UserID);
+            _dataTable = new DataTable();
+            _dataTable = GetDataTable(cmd);
+            return _dataTable;
         }
 
         #endregion

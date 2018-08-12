@@ -72,6 +72,7 @@
     <Compile Include="BusinessLogicLayer\Home.cs" />
     <Compile Include="BusinessLogicLayer\Login.cs" />
     <Compile Include="BusinessLogicLayer\LogInfo.cs" />
+    <Compile Include="BusinessLogicLayer\Settings.cs" />
     <Compile Include="BusinessLogicLayer\Texts.cs" />
     <Compile Include="DataAccessLayer\DatabaseHandler.cs" />
     <Compile Include="GUI\Dummy.cs">
@@ -92,14 +93,60 @@
     <Compile Include="GUI\LoginPage.designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\PasswordChange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\PasswordChange.designer.cs">
+      <DependentUpon>PasswordChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PersonalInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\PersonalInformation.designer.cs">
+      <DependentUpon>PersonalInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SettingsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SettingsPage.designer.cs">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TaskManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\TaskManager.designer.cs">
+      <DependentUpon>TaskManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UsernameChange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UsernameChange.designer.cs">
+      <DependentUpon>UsernameChange.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValueObjects\Person.cs" />
+    <None Include="Resources\info_icon.png" />
     <EmbeddedResource Include="GUI\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PasswordChange.resx">
+      <DependentUpon>PasswordChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PersonalInformation.resx">
+      <DependentUpon>PersonalInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SettingsPage.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TaskManager.resx">
+      <DependentUpon>TaskManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UsernameChange.resx">
+      <DependentUpon>UsernameChange.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -109,6 +156,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Content Include="ApplicationFiles\DataBase\KiRA_Database.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
