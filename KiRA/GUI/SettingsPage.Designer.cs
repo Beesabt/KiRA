@@ -31,14 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsPage));
             this.pMenuBar = new System.Windows.Forms.Panel();
-            this.btnPersonalInformation = new System.Windows.Forms.Button();
             this.btnTaskManager = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             this.btnPassword = new System.Windows.Forms.Button();
             this.btnUsername = new System.Windows.Forms.Button();
-            this.taskBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnMinimize = new System.Windows.Forms.Button();
             this.lTitle = new System.Windows.Forms.Label();
             this.pHeader = new System.Windows.Forms.Panel();
             this.pSettings = new System.Windows.Forms.FlowLayoutPanel();
@@ -46,10 +41,15 @@
             this.UCpersonalInformation = new KiRA.GUI.PersonalInformation();
             this.UCusernameChange = new KiRA.GUI.UsernameChange();
             this.UCpasswordChange = new KiRA.GUI.PasswordChange();
+            this.btnPersonalInformation = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnMinimize = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.taskBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pMenuBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).BeginInit();
             this.pHeader.SuspendLayout();
             this.pSettings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pMenuBar
@@ -66,27 +66,6 @@
             this.pMenuBar.Size = new System.Drawing.Size(1030, 85);
             this.pMenuBar.TabIndex = 1;
             // 
-            // btnPersonalInformation
-            // 
-            this.btnPersonalInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(186)))), ((int)(((byte)(62)))));
-            this.btnPersonalInformation.FlatAppearance.BorderSize = 0;
-            this.btnPersonalInformation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(167)))), ((int)(((byte)(55)))));
-            this.btnPersonalInformation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(167)))), ((int)(((byte)(55)))));
-            this.btnPersonalInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPersonalInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnPersonalInformation.ForeColor = System.Drawing.Color.White;
-            this.btnPersonalInformation.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonalInformation.Image")));
-            this.btnPersonalInformation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPersonalInformation.Location = new System.Drawing.Point(180, 0);
-            this.btnPersonalInformation.Margin = new System.Windows.Forms.Padding(1);
-            this.btnPersonalInformation.Name = "btnPersonalInformation";
-            this.btnPersonalInformation.Size = new System.Drawing.Size(180, 85);
-            this.btnPersonalInformation.TabIndex = 6;
-            this.btnPersonalInformation.Text = "Personal\r\ninformation";
-            this.btnPersonalInformation.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPersonalInformation.UseVisualStyleBackColor = false;
-            this.btnPersonalInformation.Click += new System.EventHandler(this.btnPersonalInformation_Click);
-            // 
             // btnTaskManager
             // 
             this.btnTaskManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(0)))), ((int)(((byte)(82)))));
@@ -96,7 +75,7 @@
             this.btnTaskManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTaskManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaskManager.ForeColor = System.Drawing.Color.White;
-            this.btnTaskManager.Image = ((System.Drawing.Image)(resources.GetObject("btnTaskManager.Image")));
+            this.btnTaskManager.Image = global::KiRA.Properties.Resources.task_icon_white_50;
             this.btnTaskManager.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTaskManager.Location = new System.Drawing.Point(720, 0);
             this.btnTaskManager.Margin = new System.Windows.Forms.Padding(1);
@@ -108,24 +87,6 @@
             this.btnTaskManager.UseVisualStyleBackColor = false;
             this.btnTaskManager.Click += new System.EventHandler(this.btnTaskManager_Click);
             // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
-            this.btnBack.Location = new System.Drawing.Point(0, 0);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(1);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(180, 85);
-            this.btnBack.TabIndex = 0;
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnHome_Click);
-            // 
             // btnPassword
             // 
             this.btnPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
@@ -135,7 +96,7 @@
             this.btnPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnPassword.ForeColor = System.Drawing.Color.White;
-            this.btnPassword.Image = ((System.Drawing.Image)(resources.GetObject("btnPassword.Image")));
+            this.btnPassword.Image = global::KiRA.Properties.Resources.lock_icon_white_50;
             this.btnPassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPassword.Location = new System.Drawing.Point(360, 0);
             this.btnPassword.Margin = new System.Windows.Forms.Padding(1);
@@ -156,7 +117,7 @@
             this.btnUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsername.ForeColor = System.Drawing.Color.White;
-            this.btnUsername.Image = ((System.Drawing.Image)(resources.GetObject("btnUsername.Image")));
+            this.btnUsername.Image = global::KiRA.Properties.Resources.user_icon_white_50;
             this.btnUsername.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsername.Location = new System.Drawing.Point(540, 0);
             this.btnUsername.Margin = new System.Windows.Forms.Padding(1);
@@ -167,36 +128,6 @@
             this.btnUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUsername.UseVisualStyleBackColor = false;
             this.btnUsername.Click += new System.EventHandler(this.btnUsername_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
-            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Location = new System.Drawing.Point(1000, 0);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(30, 30);
-            this.btnExit.TabIndex = 0;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimize.BackgroundImage")));
-            this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.btnMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Location = new System.Drawing.Point(970, 0);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(30, 30);
-            this.btnMinimize.TabIndex = 3;
-            this.btnMinimize.UseVisualStyleBackColor = true;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // lTitle
             // 
@@ -270,6 +201,75 @@
             this.UCpasswordChange.Size = new System.Drawing.Size(1030, 535);
             this.UCpasswordChange.TabIndex = 0;
             // 
+            // btnPersonalInformation
+            // 
+            this.btnPersonalInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(186)))), ((int)(((byte)(62)))));
+            this.btnPersonalInformation.FlatAppearance.BorderSize = 0;
+            this.btnPersonalInformation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(167)))), ((int)(((byte)(55)))));
+            this.btnPersonalInformation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(167)))), ((int)(((byte)(55)))));
+            this.btnPersonalInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPersonalInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnPersonalInformation.ForeColor = System.Drawing.Color.White;
+            this.btnPersonalInformation.Image = global::KiRA.Properties.Resources.info_icon_white_50;
+            this.btnPersonalInformation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPersonalInformation.Location = new System.Drawing.Point(180, 0);
+            this.btnPersonalInformation.Margin = new System.Windows.Forms.Padding(1);
+            this.btnPersonalInformation.Name = "btnPersonalInformation";
+            this.btnPersonalInformation.Size = new System.Drawing.Size(180, 85);
+            this.btnPersonalInformation.TabIndex = 6;
+            this.btnPersonalInformation.Text = "Personal\r\ninformation";
+            this.btnPersonalInformation.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPersonalInformation.UseVisualStyleBackColor = false;
+            this.btnPersonalInformation.Click += new System.EventHandler(this.btnPersonalInformation_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnBack.Image = global::KiRA.Properties.Resources.back_icon_white_50;
+            this.btnBack.Location = new System.Drawing.Point(0, 0);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(1);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(180, 85);
+            this.btnBack.TabIndex = 0;
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimize.BackgroundImage")));
+            this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.btnMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Location = new System.Drawing.Point(970, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(30, 30);
+            this.btnMinimize.TabIndex = 3;
+            this.btnMinimize.UseVisualStyleBackColor = true;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Location = new System.Drawing.Point(1000, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(30, 30);
+            this.btnExit.TabIndex = 0;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // SettingsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,9 +284,9 @@
             this.Name = "SettingsPage";
             this.Load += new System.EventHandler(this.SettingsPage_Load);
             this.pMenuBar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).EndInit();
             this.pHeader.ResumeLayout(false);
             this.pSettings.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

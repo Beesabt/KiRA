@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.pHeader = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnMinimalize = new System.Windows.Forms.Button();
             this.lTitle = new System.Windows.Forms.Label();
-            this.btnStatistics = new System.Windows.Forms.Button();
-            this.btnWorkingHours = new System.Windows.Forms.Button();
-            this.btnSettings = new System.Windows.Forms.Button();
-            this.btnHolidays = new System.Windows.Forms.Button();
             this.pFooter = new System.Windows.Forms.Panel();
             this.lFooter = new System.Windows.Forms.Label();
+            this.btnStatistics = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnMinimalize = new System.Windows.Forms.Button();
+            this.btnHolidays = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
+            this.btnWorkingHours = new System.Windows.Forms.Button();
             this.pHeader.SuspendLayout();
             this.pFooter.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +57,58 @@
             this.pHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pHeader_MouseDown);
             this.pHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pHeader_MouseMove);
             this.pHeader.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pHeader_MouseUp);
+            // 
+            // lTitle
+            // 
+            this.lTitle.AutoSize = true;
+            this.lTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.lTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lTitle.ForeColor = System.Drawing.Color.White;
+            this.lTitle.Location = new System.Drawing.Point(0, 0);
+            this.lTitle.Name = "lTitle";
+            this.lTitle.Size = new System.Drawing.Size(328, 31);
+            this.lTitle.TabIndex = 2;
+            this.lTitle.Text = "KiRA - Munkaidő Kezelő";
+            // 
+            // pFooter
+            // 
+            this.pFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.pFooter.Controls.Add(this.lFooter);
+            this.pFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pFooter.Location = new System.Drawing.Point(0, 630);
+            this.pFooter.Name = "pFooter";
+            this.pFooter.Size = new System.Drawing.Size(1030, 20);
+            this.pFooter.TabIndex = 6;
+            // 
+            // lFooter
+            // 
+            this.lFooter.AutoSize = true;
+            this.lFooter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lFooter.Location = new System.Drawing.Point(422, 2);
+            this.lFooter.Name = "lFooter";
+            this.lFooter.Size = new System.Drawing.Size(185, 16);
+            this.lFooter.TabIndex = 0;
+            this.lFooter.Text = "Contact: beesabt@gmail.com";
+            // 
+            // btnStatistics
+            // 
+            this.btnStatistics.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnStatistics.FlatAppearance.BorderSize = 0;
+            this.btnStatistics.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(0)))));
+            this.btnStatistics.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(0)))));
+            this.btnStatistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStatistics.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatistics.ForeColor = System.Drawing.Color.White;
+            this.btnStatistics.Image = global::KiRA.Properties.Resources.piechart_icon_white_100;
+            this.btnStatistics.Location = new System.Drawing.Point(535, 348);
+            this.btnStatistics.Margin = new System.Windows.Forms.Padding(1);
+            this.btnStatistics.Name = "btnStatistics";
+            this.btnStatistics.Size = new System.Drawing.Size(440, 240);
+            this.btnStatistics.TabIndex = 5;
+            this.btnStatistics.Text = "Statistics";
+            this.btnStatistics.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnStatistics.UseVisualStyleBackColor = false;
+            this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
             // 
             // btnExit
             // 
@@ -89,78 +141,6 @@
             this.btnMinimalize.UseVisualStyleBackColor = true;
             this.btnMinimalize.Click += new System.EventHandler(this.btnMinimalize_Click);
             // 
-            // lTitle
-            // 
-            this.lTitle.AutoSize = true;
-            this.lTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.lTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lTitle.ForeColor = System.Drawing.Color.White;
-            this.lTitle.Location = new System.Drawing.Point(0, 0);
-            this.lTitle.Name = "lTitle";
-            this.lTitle.Size = new System.Drawing.Size(328, 31);
-            this.lTitle.TabIndex = 2;
-            this.lTitle.Text = "KiRA - Munkaidő Kezelő";
-            // 
-            // btnStatistics
-            // 
-            this.btnStatistics.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnStatistics.FlatAppearance.BorderSize = 0;
-            this.btnStatistics.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(0)))));
-            this.btnStatistics.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(0)))));
-            this.btnStatistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStatistics.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStatistics.ForeColor = System.Drawing.Color.White;
-            this.btnStatistics.Image = ((System.Drawing.Image)(resources.GetObject("btnStatistics.Image")));
-            this.btnStatistics.Location = new System.Drawing.Point(535, 348);
-            this.btnStatistics.Margin = new System.Windows.Forms.Padding(1);
-            this.btnStatistics.Name = "btnStatistics";
-            this.btnStatistics.Size = new System.Drawing.Size(440, 240);
-            this.btnStatistics.TabIndex = 5;
-            this.btnStatistics.Text = "Statistics";
-            this.btnStatistics.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnStatistics.UseVisualStyleBackColor = false;
-            this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
-            // 
-            // btnWorkingHours
-            // 
-            this.btnWorkingHours.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.btnWorkingHours.FlatAppearance.BorderSize = 0;
-            this.btnWorkingHours.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(133)))), ((int)(((byte)(218)))));
-            this.btnWorkingHours.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(120)))), ((int)(((byte)(167)))));
-            this.btnWorkingHours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWorkingHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnWorkingHours.ForeColor = System.Drawing.Color.White;
-            this.btnWorkingHours.Image = ((System.Drawing.Image)(resources.GetObject("btnWorkingHours.Image")));
-            this.btnWorkingHours.Location = new System.Drawing.Point(55, 69);
-            this.btnWorkingHours.Margin = new System.Windows.Forms.Padding(1);
-            this.btnWorkingHours.Name = "btnWorkingHours";
-            this.btnWorkingHours.Size = new System.Drawing.Size(440, 240);
-            this.btnWorkingHours.TabIndex = 2;
-            this.btnWorkingHours.Text = "Working Hours";
-            this.btnWorkingHours.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnWorkingHours.UseVisualStyleBackColor = false;
-            this.btnWorkingHours.Click += new System.EventHandler(this.btnWorkingHours_Click);
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(130)))), ((int)(((byte)(5)))));
-            this.btnSettings.FlatAppearance.BorderSize = 0;
-            this.btnSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(143)))), ((int)(((byte)(30)))));
-            this.btnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(143)))), ((int)(((byte)(30)))));
-            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.Location = new System.Drawing.Point(535, 69);
-            this.btnSettings.Margin = new System.Windows.Forms.Padding(1);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(440, 240);
-            this.btnSettings.TabIndex = 3;
-            this.btnSettings.Text = "Settings";
-            this.btnSettings.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnSettings.UseVisualStyleBackColor = false;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
-            // 
             // btnHolidays
             // 
             this.btnHolidays.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(0)))), ((int)(((byte)(82)))));
@@ -170,7 +150,7 @@
             this.btnHolidays.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHolidays.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHolidays.ForeColor = System.Drawing.Color.White;
-            this.btnHolidays.Image = ((System.Drawing.Image)(resources.GetObject("btnHolidays.Image")));
+            this.btnHolidays.Image = global::KiRA.Properties.Resources.beach_icon_white_50;
             this.btnHolidays.Location = new System.Drawing.Point(55, 348);
             this.btnHolidays.Margin = new System.Windows.Forms.Padding(1);
             this.btnHolidays.Name = "btnHolidays";
@@ -181,25 +161,45 @@
             this.btnHolidays.UseVisualStyleBackColor = false;
             this.btnHolidays.Click += new System.EventHandler(this.btnHolidays_Click);
             // 
-            // pFooter
+            // btnSettings
             // 
-            this.pFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.pFooter.Controls.Add(this.lFooter);
-            this.pFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pFooter.Location = new System.Drawing.Point(0, 630);
-            this.pFooter.Name = "pFooter";
-            this.pFooter.Size = new System.Drawing.Size(1030, 20);
-            this.pFooter.TabIndex = 6;
+            this.btnSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(130)))), ((int)(((byte)(5)))));
+            this.btnSettings.FlatAppearance.BorderSize = 0;
+            this.btnSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(143)))), ((int)(((byte)(30)))));
+            this.btnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(143)))), ((int)(((byte)(30)))));
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.ForeColor = System.Drawing.Color.White;
+            this.btnSettings.Image = global::KiRA.Properties.Resources.settings_icon_white_50;
+            this.btnSettings.Location = new System.Drawing.Point(535, 69);
+            this.btnSettings.Margin = new System.Windows.Forms.Padding(1);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(440, 240);
+            this.btnSettings.TabIndex = 3;
+            this.btnSettings.Text = "Settings";
+            this.btnSettings.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnSettings.UseVisualStyleBackColor = false;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
-            // lFooter
+            // btnWorkingHours
             // 
-            this.lFooter.AutoSize = true;
-            this.lFooter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lFooter.Location = new System.Drawing.Point(422, 2);
-            this.lFooter.Name = "lFooter";
-            this.lFooter.Size = new System.Drawing.Size(185, 16);
-            this.lFooter.TabIndex = 0;
-            this.lFooter.Text = "Contact: beesabt@gmail.com";
+            this.btnWorkingHours.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnWorkingHours.FlatAppearance.BorderSize = 0;
+            this.btnWorkingHours.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(133)))), ((int)(((byte)(218)))));
+            this.btnWorkingHours.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(120)))), ((int)(((byte)(167)))));
+            this.btnWorkingHours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWorkingHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnWorkingHours.ForeColor = System.Drawing.Color.White;
+            this.btnWorkingHours.Image = global::KiRA.Properties.Resources.clock_icon_white_100;
+            this.btnWorkingHours.Location = new System.Drawing.Point(55, 69);
+            this.btnWorkingHours.Margin = new System.Windows.Forms.Padding(1);
+            this.btnWorkingHours.Name = "btnWorkingHours";
+            this.btnWorkingHours.Size = new System.Drawing.Size(440, 240);
+            this.btnWorkingHours.TabIndex = 2;
+            this.btnWorkingHours.Text = "Working Hours";
+            this.btnWorkingHours.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnWorkingHours.UseVisualStyleBackColor = false;
+            this.btnWorkingHours.Click += new System.EventHandler(this.btnWorkingHours_Click);
             // 
             // HomePage
             // 
