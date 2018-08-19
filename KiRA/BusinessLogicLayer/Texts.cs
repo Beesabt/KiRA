@@ -115,7 +115,7 @@
             {
                 get
                 {
-                   return "Old password is wrong.";
+                    return "Old password is wrong.";
                 }
             }
 
@@ -135,6 +135,23 @@
                 }
             }
 
+            public static string NewPasswordSameAsOldPassword
+            {
+                get
+                {
+                    return "The new password can not be the old password.";
+                }
+            }
+
+            public static string NewPasswordIsNotAllowed
+            {
+                get
+                {
+                    return "The new password does not following the rules of the password.\n" +
+                           "If you need information from the rules then move your mouse above the information icon.";
+                }
+            }
+
             public static string NewEmailMismatched
             {
                 get
@@ -143,6 +160,21 @@
                 }
             }
 
+            public static string NewEmailSameAsOldEmail
+            {
+                get
+                {
+                    return "The new e-mail can not be the old e-mail.";
+                }
+            }
+
+            public static string EmailIsNotValid
+            {
+                get
+                {
+                    return "The format of the e-mail address is not proper.";
+                }
+            }
         }
 
         public static class InformationMessages
@@ -180,7 +212,7 @@
             }
         }
 
-            public static class Captions
+        public static class Captions
         {
 
             public static string LoginFailed
@@ -224,6 +256,14 @@
                 }
             }
 
+            public static string NewPasswordIsNotAllowed
+            {
+                get
+                {
+                    return "New password is not allowed";
+                }
+            }
+
             public static string MissmatchadEmails
             {
                 get
@@ -232,11 +272,27 @@
                 }
             }
 
+            public static string NewEmaildIsNotAllowed
+            {
+                get
+                {
+                    return "New e-mail is not allowed";
+                }
+            }
+
+            public static string InvalidEmail
+            {
+                get
+                {
+                    return "Invalid E-mail";
+                }
+            }
+
             public static string SuccessfulChange
             {
                 get
                 {
-                     return "Successful action";
+                    return "Successful action";
                 }
             }
         }
