@@ -93,6 +93,26 @@ namespace KiRA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap email_icon_white_50 {
+            get {
+                object obj = ResourceManager.GetObject("email_icon_white_50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap email_icon_white_501 {
+            get {
+                object obj = ResourceManager.GetObject("email_icon_white_501", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap info_icon {
             get {
                 object obj = ResourceManager.GetObject("info_icon", resourceCulture);
@@ -146,16 +166,6 @@ namespace KiRA.Properties {
         internal static System.Drawing.Bitmap task_icon_white_50 {
             get {
                 object obj = ResourceManager.GetObject("task_icon_white_50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap user_icon_white_50 {
-            get {
-                object obj = ResourceManager.GetObject("user_icon_white_50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
