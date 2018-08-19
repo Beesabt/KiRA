@@ -31,18 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsPage));
             this.pMenuBar = new System.Windows.Forms.Panel();
-            this.btnTaskManager = new System.Windows.Forms.Button();
-            this.btnPassword = new System.Windows.Forms.Button();
-            this.btnUsername = new System.Windows.Forms.Button();
             this.lTitle = new System.Windows.Forms.Label();
             this.pHeader = new System.Windows.Forms.Panel();
             this.pSettings = new System.Windows.Forms.FlowLayoutPanel();
             this.UCtaskManager = new KiRA.GUI.TaskManager();
             this.UCpersonalInformation = new KiRA.GUI.PersonalInformation();
-            this.UCusernameChange = new KiRA.GUI.UsernameChange();
+            this.UCusernameChange = new KiRA.GUI.EmailChange();
             this.UCpasswordChange = new KiRA.GUI.PasswordChange();
             this.btnPersonalInformation = new System.Windows.Forms.Button();
+            this.btnTaskManager = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.btnPassword = new System.Windows.Forms.Button();
+            this.btnUsername = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.taskBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -65,69 +65,6 @@
             this.pMenuBar.Name = "pMenuBar";
             this.pMenuBar.Size = new System.Drawing.Size(1030, 85);
             this.pMenuBar.TabIndex = 1;
-            // 
-            // btnTaskManager
-            // 
-            this.btnTaskManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(0)))), ((int)(((byte)(82)))));
-            this.btnTaskManager.FlatAppearance.BorderSize = 0;
-            this.btnTaskManager.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(25)))), ((int)(((byte)(98)))));
-            this.btnTaskManager.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(25)))), ((int)(((byte)(98)))));
-            this.btnTaskManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTaskManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaskManager.ForeColor = System.Drawing.Color.White;
-            this.btnTaskManager.Image = global::KiRA.Properties.Resources.task_icon_white_50;
-            this.btnTaskManager.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTaskManager.Location = new System.Drawing.Point(720, 0);
-            this.btnTaskManager.Margin = new System.Windows.Forms.Padding(1);
-            this.btnTaskManager.Name = "btnTaskManager";
-            this.btnTaskManager.Size = new System.Drawing.Size(180, 85);
-            this.btnTaskManager.TabIndex = 5;
-            this.btnTaskManager.Text = "Task\r\nmanager";
-            this.btnTaskManager.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTaskManager.UseVisualStyleBackColor = false;
-            this.btnTaskManager.Click += new System.EventHandler(this.btnTaskManager_Click);
-            // 
-            // btnPassword
-            // 
-            this.btnPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.btnPassword.FlatAppearance.BorderSize = 0;
-            this.btnPassword.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(133)))), ((int)(((byte)(218)))));
-            this.btnPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(133)))), ((int)(((byte)(218)))));
-            this.btnPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnPassword.ForeColor = System.Drawing.Color.White;
-            this.btnPassword.Image = global::KiRA.Properties.Resources.lock_icon_white_50;
-            this.btnPassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPassword.Location = new System.Drawing.Point(360, 0);
-            this.btnPassword.Margin = new System.Windows.Forms.Padding(1);
-            this.btnPassword.Name = "btnPassword";
-            this.btnPassword.Size = new System.Drawing.Size(180, 85);
-            this.btnPassword.TabIndex = 3;
-            this.btnPassword.Text = "Password\r\nchange";
-            this.btnPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPassword.UseVisualStyleBackColor = false;
-            this.btnPassword.Click += new System.EventHandler(this.btnPassword_Click);
-            // 
-            // btnUsername
-            // 
-            this.btnUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(185)))), ((int)(((byte)(0)))));
-            this.btnUsername.FlatAppearance.BorderSize = 0;
-            this.btnUsername.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
-            this.btnUsername.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
-            this.btnUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsername.ForeColor = System.Drawing.Color.White;
-            this.btnUsername.Image = global::KiRA.Properties.Resources.user_icon_white_50;
-            this.btnUsername.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsername.Location = new System.Drawing.Point(540, 0);
-            this.btnUsername.Margin = new System.Windows.Forms.Padding(1);
-            this.btnUsername.Name = "btnUsername";
-            this.btnUsername.Size = new System.Drawing.Size(180, 85);
-            this.btnUsername.TabIndex = 4;
-            this.btnUsername.Text = "Username\r\nchange";
-            this.btnUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUsername.UseVisualStyleBackColor = false;
-            this.btnUsername.Click += new System.EventHandler(this.btnUsername_Click);
             // 
             // lTitle
             // 
@@ -222,6 +159,27 @@
             this.btnPersonalInformation.UseVisualStyleBackColor = false;
             this.btnPersonalInformation.Click += new System.EventHandler(this.btnPersonalInformation_Click);
             // 
+            // btnTaskManager
+            // 
+            this.btnTaskManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(0)))), ((int)(((byte)(82)))));
+            this.btnTaskManager.FlatAppearance.BorderSize = 0;
+            this.btnTaskManager.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(25)))), ((int)(((byte)(98)))));
+            this.btnTaskManager.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(25)))), ((int)(((byte)(98)))));
+            this.btnTaskManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTaskManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaskManager.ForeColor = System.Drawing.Color.White;
+            this.btnTaskManager.Image = global::KiRA.Properties.Resources.task_icon_white_50;
+            this.btnTaskManager.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTaskManager.Location = new System.Drawing.Point(720, 0);
+            this.btnTaskManager.Margin = new System.Windows.Forms.Padding(1);
+            this.btnTaskManager.Name = "btnTaskManager";
+            this.btnTaskManager.Size = new System.Drawing.Size(180, 85);
+            this.btnTaskManager.TabIndex = 5;
+            this.btnTaskManager.Text = "Task\r\nmanager";
+            this.btnTaskManager.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTaskManager.UseVisualStyleBackColor = false;
+            this.btnTaskManager.Click += new System.EventHandler(this.btnTaskManager_Click);
+            // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
@@ -239,6 +197,48 @@
             this.btnBack.TabIndex = 0;
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // btnPassword
+            // 
+            this.btnPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnPassword.FlatAppearance.BorderSize = 0;
+            this.btnPassword.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(133)))), ((int)(((byte)(218)))));
+            this.btnPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(133)))), ((int)(((byte)(218)))));
+            this.btnPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnPassword.ForeColor = System.Drawing.Color.White;
+            this.btnPassword.Image = global::KiRA.Properties.Resources.lock_icon_white_50;
+            this.btnPassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPassword.Location = new System.Drawing.Point(360, 0);
+            this.btnPassword.Margin = new System.Windows.Forms.Padding(1);
+            this.btnPassword.Name = "btnPassword";
+            this.btnPassword.Size = new System.Drawing.Size(180, 85);
+            this.btnPassword.TabIndex = 3;
+            this.btnPassword.Text = "Password\r\nchange";
+            this.btnPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPassword.UseVisualStyleBackColor = false;
+            this.btnPassword.Click += new System.EventHandler(this.btnPassword_Click);
+            // 
+            // btnUsername
+            // 
+            this.btnUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(185)))), ((int)(((byte)(0)))));
+            this.btnUsername.FlatAppearance.BorderSize = 0;
+            this.btnUsername.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
+            this.btnUsername.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
+            this.btnUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsername.ForeColor = System.Drawing.Color.White;
+            this.btnUsername.Image = global::KiRA.Properties.Resources.email_icon_white_501;
+            this.btnUsername.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsername.Location = new System.Drawing.Point(540, 0);
+            this.btnUsername.Margin = new System.Windows.Forms.Padding(1);
+            this.btnUsername.Name = "btnUsername";
+            this.btnUsername.Size = new System.Drawing.Size(180, 85);
+            this.btnUsername.TabIndex = 4;
+            this.btnUsername.Text = "E-mail\r\nchange";
+            this.btnUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUsername.UseVisualStyleBackColor = false;
+            this.btnUsername.Click += new System.EventHandler(this.btnUsername_Click);
             // 
             // btnMinimize
             // 
@@ -305,7 +305,7 @@
         private System.Windows.Forms.Panel pHeader;
         private System.Windows.Forms.FlowLayoutPanel pSettings;
         private PersonalInformation UCpersonalInformation;
-        private UsernameChange UCusernameChange;
+        private EmailChange UCusernameChange;
         private PasswordChange UCpasswordChange;
         private System.Windows.Forms.Button btnPersonalInformation;
         private TaskManager UCtaskManager;

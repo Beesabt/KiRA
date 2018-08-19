@@ -87,7 +87,7 @@
             this.lBrand.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lBrand.Name = "lBrand";
             this.lBrand.Size = new System.Drawing.Size(137, 55);
-            this.lBrand.TabIndex = 3;
+            this.lBrand.TabIndex = 5;
             this.lBrand.Text = "KiRA";
             // 
             // pLine
@@ -97,7 +97,7 @@
             this.pLine.Margin = new System.Windows.Forms.Padding(2);
             this.pLine.Name = "pLine";
             this.pLine.Size = new System.Drawing.Size(310, 2);
-            this.pLine.TabIndex = 5;
+            this.pLine.TabIndex = 6;
             // 
             // tbEmail
             // 
@@ -119,7 +119,7 @@
             this.lEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lEmail.Name = "lEmail";
             this.lEmail.Size = new System.Drawing.Size(63, 24);
-            this.lEmail.TabIndex = 7;
+            this.lEmail.TabIndex = 3;
             this.lEmail.Text = "E-mail";
             // 
             // lPassword
@@ -131,7 +131,7 @@
             this.lPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lPassword.Name = "lPassword";
             this.lPassword.Size = new System.Drawing.Size(92, 24);
-            this.lPassword.TabIndex = 8;
+            this.lPassword.TabIndex = 4;
             this.lPassword.Text = "Password";
             // 
             // btnLang
@@ -139,7 +139,7 @@
             this.btnLang.Location = new System.Drawing.Point(0, 0);
             this.btnLang.Name = "btnLang";
             this.btnLang.Size = new System.Drawing.Size(75, 23);
-            this.btnLang.TabIndex = 10;
+            this.btnLang.TabIndex = 7;
             // 
             // btnExit
             // 
@@ -154,7 +154,7 @@
             this.btnExit.Location = new System.Drawing.Point(500, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(30, 30);
-            this.btnExit.TabIndex = 3;
+            this.btnExit.TabIndex = 1;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -170,7 +170,7 @@
             this.btnMinimalize.Location = new System.Drawing.Point(470, 0);
             this.btnMinimalize.Name = "btnMinimalize";
             this.btnMinimalize.Size = new System.Drawing.Size(30, 30);
-            this.btnMinimalize.TabIndex = 4;
+            this.btnMinimalize.TabIndex = 0;
             this.btnMinimalize.UseVisualStyleBackColor = false;
             this.btnMinimalize.Click += new System.EventHandler(this.btnMinimalize_Click);
             // 
@@ -183,7 +183,7 @@
             this.pHeader.Location = new System.Drawing.Point(0, 0);
             this.pHeader.Name = "pHeader";
             this.pHeader.Size = new System.Drawing.Size(530, 30);
-            this.pHeader.TabIndex = 9;
+            this.pHeader.TabIndex = 7;
             this.pHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pHeader_MouseDown);
             this.pHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pHeader_MouseMove);
             this.pHeader.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pHeader_MouseUp);

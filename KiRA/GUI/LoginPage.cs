@@ -32,13 +32,13 @@ namespace KiRA.GUI
             {
                 if (string.IsNullOrEmpty(tbEmail.Text))
                 {
-                    MessageBox.Show(lEmail.Text + BusinessLogicLayer.Texts.ErrorMessages.FieldIsEmpty, BusinessLogicLayer.Texts.Captions.EmptyRequiredField, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(lEmail.Text.Trim(':') + BusinessLogicLayer.Texts.ErrorMessages.FieldIsEmpty, BusinessLogicLayer.Texts.Captions.EmptyRequiredField, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
                 if (string.IsNullOrEmpty(tbPassword.Text))
                 {
-                    MessageBox.Show(lPassword.Text + BusinessLogicLayer.Texts.ErrorMessages.FieldIsEmpty, BusinessLogicLayer.Texts.Captions.EmptyRequiredField, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(lPassword.Text.Trim(':') + BusinessLogicLayer.Texts.ErrorMessages.FieldIsEmpty, BusinessLogicLayer.Texts.Captions.EmptyRequiredField, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 

@@ -19,6 +19,28 @@ namespace KiRA.GUI
             {
                 _settings = new Settings();
 
+                // Null check
+                if (string.IsNullOrEmpty(tbOldPassword.Text.Trim()))
+                {
+                    MessageBox.Show(lOldPassword.Text.Trim(':') + Texts.ErrorMessages.FieldIsEmpty, Texts.Captions.EmptyRequiredField, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Null check
+                if (string.IsNullOrEmpty(tbNewPassword.Text.Trim()))
+                {
+                    MessageBox.Show(lNewPassword.Text.Trim(':') + Texts.ErrorMessages.FieldIsEmpty, Texts.Captions.EmptyRequiredField, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Null check
+                if (string.IsNullOrEmpty(tbNewPasswordAgain.Text.Trim()))
+                {
+                    MessageBox.Show(lNewPasswordAgain.Text.Trim(':') + Texts.ErrorMessages.FieldIsEmpty, Texts.Captions.EmptyRequiredField, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Wrong old password
                 if (!_settings.OldValueValidation(Texts.PersonProperties.Password, tbOldPassword.Text))
                 {
                     MessageBox.Show(Texts.ErrorMessages.WrongOldPassword, Texts.Captions.WrongOldValue, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -26,21 +48,28 @@ namespace KiRA.GUI
                     return;
                 }
 
-                if (string.IsNullOrEmpty(tbNewPassword.Text.Trim()))
-                {
-                    MessageBox.Show(lNewPassword.Text + Texts.ErrorMessages.FieldIsEmpty, Texts.Captions.EmptyRequiredField, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                if (string.IsNullOrEmpty(tbNewPasswordAgain.Text.Trim()))
-                {
-                    MessageBox.Show(lNewPasswordAgain.Text + Texts.ErrorMessages.FieldIsEmpty, Texts.Captions.EmptyRequiredField, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                if (tbNewPassword.Text == tbNewPasswordAgain.Text)
+                // Mismatched new passwords
+                if (tbNewPassword.Text != tbNewPasswordAgain.Text)
                 {
                     MessageBox.Show(Texts.ErrorMessages.NewPasswordsMismatched, Texts.Captions.MissmatchadPasswords, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    tbNewPasswordAgain.Text = string.Empty;
+                    return;
+                }
+
+                // New password is the same as the old password
+                if (tbOldPassword.Text == tbNewPassword.Text)
+                {
+                    MessageBox.Show(Texts.ErrorMessages.NewPasswordSameAsOldPassword, Texts.Captions.NewPasswordIsNotAllowed, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    tbNewPassword.Text = string.Empty;
+                    tbNewPasswordAgain.Text = string.Empty;
+                    return;
+                }
+
+                // Check of the password's rules
+                if (!_settings.IsValidPassword(tbNewPassword.Text))
+                {
+                    MessageBox.Show(Texts.ErrorMessages.NewPasswordIsNotAllowed, Texts.Captions.NewPasswordIsNotAllowed, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    tbNewPassword.Text = string.Empty;
                     tbNewPasswordAgain.Text = string.Empty;
                     return;
                 }
@@ -57,6 +86,7 @@ namespace KiRA.GUI
                 MessageBox.Show(error.Message + "\r\n\r\n" + error.GetBaseException().ToString(), error.GetType().ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-     
+      
     }
+
 }

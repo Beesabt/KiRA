@@ -49,7 +49,7 @@
             this.lPasswordChange.Location = new System.Drawing.Point(109, 68);
             this.lPasswordChange.Name = "lPasswordChange";
             this.lPasswordChange.Size = new System.Drawing.Size(272, 37);
-            this.lPasswordChange.TabIndex = 5;
+            this.lPasswordChange.TabIndex = 7;
             this.lPasswordChange.Text = "Password change";
             // 
             // btnPasswordChange
@@ -85,7 +85,7 @@
             this.lOldPassword.Location = new System.Drawing.Point(259, 182);
             this.lOldPassword.Name = "lOldPassword";
             this.lOldPassword.Size = new System.Drawing.Size(109, 21);
-            this.lOldPassword.TabIndex = 6;
+            this.lOldPassword.TabIndex = 4;
             this.lOldPassword.Text = "Old password:";
             // 
             // lNewPassword
@@ -95,7 +95,7 @@
             this.lNewPassword.Location = new System.Drawing.Point(252, 260);
             this.lNewPassword.Name = "lNewPassword";
             this.lNewPassword.Size = new System.Drawing.Size(116, 21);
-            this.lNewPassword.TabIndex = 7;
+            this.lNewPassword.TabIndex = 5;
             this.lNewPassword.Text = "New password:";
             // 
             // tbNewPassword
@@ -114,7 +114,7 @@
             this.lNewPasswordAgain.Location = new System.Drawing.Point(210, 328);
             this.lNewPasswordAgain.Name = "lNewPasswordAgain";
             this.lNewPasswordAgain.Size = new System.Drawing.Size(158, 21);
-            this.lNewPasswordAgain.TabIndex = 8;
+            this.lNewPasswordAgain.TabIndex = 6;
             this.lNewPasswordAgain.Text = "New password again:";
             // 
             // tbOldPassword
@@ -122,6 +122,7 @@
             this.tbOldPassword.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tbOldPassword.Location = new System.Drawing.Point(384, 180);
             this.tbOldPassword.Name = "tbOldPassword";
+            this.tbOldPassword.PasswordChar = '*';
             this.tbOldPassword.Size = new System.Drawing.Size(400, 26);
             this.tbOldPassword.TabIndex = 0;
             // 
@@ -135,8 +136,12 @@
             this.pbPasswordInformation.Size = new System.Drawing.Size(26, 26);
             this.pbPasswordInformation.TabIndex = 9;
             this.pbPasswordInformation.TabStop = false;
-            this.ttPasswordInformation.SetToolTip(this.pbPasswordInformation, "The new password must contain:\r\n- Capital and small letter\r\n- At least one number" +
-        "\r\n- Required long is 8 letters\r\n");
+            this.ttPasswordInformation.SetToolTip(this.pbPasswordInformation, "Your password has to be at least 8 characters long.\r\nMust contain at least one lo" +
+        "wer case letter, one upper case letter, one digit.");
+            // 
+            // ttPasswordInformation
+            // 
+            this.ttPasswordInformation.IsBalloon = true;
             // 
             // PasswordChange
             // 
