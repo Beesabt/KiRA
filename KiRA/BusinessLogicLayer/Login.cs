@@ -15,7 +15,7 @@ namespace KiRA.BusinessLogicLayer
             {
                 LogInfo.UserID = _DBHandler.GetUserID(Email, Password);
                 LogInfo.Email = Email;
-                if (Email == "KiRA@gmail.com" || Password == "Admin")
+                if (Email == LogInfo.DefaultEmail || Password == LogInfo.DefaultPassword)
                 {
                     LogInfo.AnnoyingMessage = true;
                 }
