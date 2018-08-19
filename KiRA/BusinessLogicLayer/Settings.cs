@@ -3,6 +3,7 @@ using KiRA.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Text.RegularExpressions;
 
 namespace KiRA.BusinessLogicLayer
 {
@@ -12,6 +13,8 @@ namespace KiRA.BusinessLogicLayer
         DatabaseHandler _DBHandler;
         DataTable _dataTable;
         Person _actualPerson;
+        bool _bIsSuccess = false;
+        int _iUpdatedRow = 0;
 
         public Settings()
         {
@@ -185,30 +188,35 @@ namespace KiRA.BusinessLogicLayer
 
         public bool OldValueValidation(string Key, string Value)
         {
-            bool isSuccess = false;
             _DBHandler = new DatabaseHandler();
-            isSuccess = _DBHandler.OldValueValidationDB(Key, Value);
-            return isSuccess;          
+            _bIsSuccess = _DBHandler.OldValueValidationDB(Key, Value);
+            return _bIsSuccess;          
+        }
+
+        public bool IsValidPassword(string newPassword)
+        {
+            Regex _NumberRegex = new Regex(@"[0-9]+");
+            Regex _UpperCharRegex = new Regex(@"[A-Z]+");
+            Regex _Minimum8CharsRegex = new Regex(@".{8,}");
+            _bIsSuccess = _NumberRegex.IsMatch(newPassword) && _UpperCharRegex.IsMatch(newPassword) && _Minimum8CharsRegex.IsMatch(newPassword);           
+            return _bIsSuccess;
         }
 
         public bool SetNewValue(string Key, string OldValue, string NewValue)
         {
-            int updatedRow = 0;
-            bool isSuccess = false;
             _DBHandler = new DatabaseHandler();
             Dictionary<string, string> data = new Dictionary<string, string>();
             data.Add(Key, NewValue);
-            isSuccess = _DBHandler.SetNewValueDB(data, Key, OldValue, updatedRow);
-            return isSuccess;
+            _bIsSuccess = _DBHandler.SetNewValueDB(data, Key, OldValue, _iUpdatedRow);
+            return _bIsSuccess;
         }
 
         public bool SetNewValues(string Key, string OldValue, Dictionary<string, string> data)
         {
-            int updatedRow = 0;
-            bool isSuccess = false;
+
             _DBHandler = new DatabaseHandler();
-            isSuccess = _DBHandler.SetNewValueDB(data, Key, OldValue, updatedRow);
-            return isSuccess;
+            _bIsSuccess = _DBHandler.SetNewValueDB(data, Key, OldValue, _iUpdatedRow);
+            return _bIsSuccess;
         }
     }
 
