@@ -25,12 +25,12 @@ namespace KiRA.GUI
 
                 _person = _settings.GetPersonalInformation();
 
-                lNameFromDatabase.Text = _person.Name;
+                if(!string.IsNullOrEmpty(_person.Name)) { lNameFromDatabase.Text = _person.Name; }
                 lRegisterNumberFromDatabase.Text = _person.RegisterNumber.ToString();
-                lCompanyFromDatabase.Text = _person.Company;
-                lCostCenterFromDatabase.Text = _person.CostCenter;
-                lPositionFromDatabase.Text = _person.Position;
-
+                if (!string.IsNullOrEmpty(_person.Company)) { lCompanyFromDatabase.Text = _person.Company; }
+                if (!string.IsNullOrEmpty(_person.CostCenter)) { lCostCenterFromDatabase.Text = _person.CostCenter; }
+                if (!string.IsNullOrEmpty(_person.Position)) { lPositionFromDatabase.Text = _person.Position; }
+                
             }
             catch (Exception error)
             {

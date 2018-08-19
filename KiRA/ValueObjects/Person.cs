@@ -11,7 +11,6 @@ namespace KiRA.ValueObjects
         #region Members
 
         private int _ID;
-        private string _Username;
         private string _Password;
         private string _Email;
         private string _Name;
@@ -24,7 +23,7 @@ namespace KiRA.ValueObjects
         private DateTime _DateOfStart;
         private DateTime _DateOfBirth;
         private int _NumberOfChildren;
-        private int _NumberOfDisabledChilden;
+        private int _NumberOfDisabledChildren;
         private int _NumberOfNewBornBabies;
         private bool _HealthDamage;
 
@@ -32,12 +31,6 @@ namespace KiRA.ValueObjects
         {
             get { return _ID; }
             set { _ID = value; }
-        }
-
-        public string Username
-        {
-            get { return _Username; }
-            set { _Username = value; }
         }
 
         public string Password
@@ -113,10 +106,10 @@ namespace KiRA.ValueObjects
             set { _NumberOfChildren = value; }
         }
 
-        public int NumberOfDisabledChilden
+        public int NumberOfDisabledChildren
         {
-            get { return _NumberOfDisabledChilden; }
-            set { _NumberOfDisabledChilden = value; }
+            get { return _NumberOfDisabledChildren; }
+            set { _NumberOfDisabledChildren = value; }
         }
 
         public int NumberOfNewBornBabies
@@ -131,14 +124,6 @@ namespace KiRA.ValueObjects
             set { _HealthDamage = value; }
         }
 
-        private string _ActualUsername;
-
-        public string ActualUsername
-        {
-            get { return _ActualUsername; }
-            set { _ActualUsername = value; }
-        }
-
 
         #endregion
 
@@ -146,7 +131,6 @@ namespace KiRA.ValueObjects
         /// Constructor of the People table in the Database.
         /// </summary>
         /// <param name="ID">ID of the user.</param>
-        /// <param name="Username">Name of the user.</param>
         /// <param name="Password">Password of the user.</param>
         /// <param name="Email">Email address of the user.</param>
         /// <param name="Name">Name of the user.</param>
@@ -162,12 +146,11 @@ namespace KiRA.ValueObjects
         /// <param name="NumberOfDisabledChildren">Number of the user's disabled children.</param>
         /// <param name="NumberOfNewBornBabies">If the user is male then he gets extra holidays after new born babies.</param>
         /// <param name="HealthDamage">If the user has 50% health damage then he gets extra holidays.</param>
-        public Person(int ID, string Username, string Password, string Email, string Name, bool Gender, int RegisterNumber, string Company,
+        public Person(int ID, string Password, string Email, string Name, bool Gender, int RegisterNumber, string Company,
             string CostCenter, string Position, int WorkingHours, DateTime DateOfStart, DateTime DateOfBirth,
             int NumberOfChildren, int NumberOfDisabledChildren, int NumberOfNewBornBabies, bool HealthDamage)
         {
             _ID = ID;
-            _Username = Username;
             _Password = Password;
             _Email = Email;
             _Name = Name;
@@ -180,7 +163,7 @@ namespace KiRA.ValueObjects
             _DateOfStart = DateOfStart;
             _DateOfBirth = DateOfBirth;
             _NumberOfChildren = NumberOfChildren;
-            _NumberOfDisabledChilden = NumberOfDisabledChilden;
+            _NumberOfDisabledChildren = NumberOfDisabledChildren;
             _NumberOfNewBornBabies = NumberOfNewBornBabies;
             _HealthDamage = HealthDamage;
         }

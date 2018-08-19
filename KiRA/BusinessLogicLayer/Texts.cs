@@ -18,11 +18,6 @@
                 get { return "ID"; }
             }
 
-            public static string Username
-            {
-                get { return "Username"; }
-            }
-
             public static string Password
             {
                 get { return "Password"; }
@@ -56,6 +51,11 @@
             {
                 get { return "Position"; }
             }
+
+            public static string WorkingHours
+            {
+                get { return "WorkingHours"; }
+            }
             public static string DateOfStart
             {
                 get { return "DateOfStart"; }
@@ -87,11 +87,11 @@
         public static class ErrorMessages
         {
 
-            public static string WrongUsernamePassword
+            public static string WrongEmailPassword
             {
                 get
                 {
-                    return "Username or password is wrong.";
+                    return "E-mail or password is wrong.";
                 }
             }
 
@@ -103,11 +103,11 @@
                 }
             }
 
-            public static string DefaultUsernameOrPassword
+            public static string DefaultEmailOrPassword
             {
                 get
                 {
-                    return "You use default username or password, please change it in the Settings.\nThis message appears until you change the default login parameters.";
+                    return "You use default e-mail or password, please change it in the Settings.\nThis message appears until you change the default login parameters.";
                 }
             }
 
@@ -119,11 +119,11 @@
                 }
             }
 
-            public static string WrongOldUsername
+            public static string WrongOldEmail
             {
                 get
                 {
-                    return "Old username is wrong.";
+                    return "Old e-mail is wrong.";
                 }
             }
 
@@ -135,11 +135,11 @@
                 }
             }
 
-            public static string NewUsernamesMismatched
+            public static string NewEmailMismatched
             {
                 get
                 {
-                    return "The new usernames are mismatched.";
+                    return "The new e-mails are mismatched.";
                 }
             }
 
@@ -163,11 +163,11 @@
                 }
             }
 
-            public static string UsernameChanged
+            public static string EmailChanged
             {
                 get
                 {
-                    return "Username changed successfully.";
+                    return "E-mail changed successfully.";
                 }
             }
 
@@ -224,11 +224,11 @@
                 }
             }
 
-            public static string MissmatchadUsernames
+            public static string MissmatchadEmails
             {
                 get
                 {
-                    return "Mismatched usernames";
+                    return "Mismatched e-mails";
                 }
             }
 

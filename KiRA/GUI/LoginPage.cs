@@ -22,7 +22,7 @@ namespace KiRA.GUI
 
         private void Login_Load(object sender, EventArgs e)
         {
-            tbUsername.Select();
+            tbEmail.Select();
             btnLogin.Focus();
         }
 
@@ -30,9 +30,9 @@ namespace KiRA.GUI
         {
             try
             {
-                if (string.IsNullOrEmpty(tbUsername.Text))
+                if (string.IsNullOrEmpty(tbEmail.Text))
                 {
-                    MessageBox.Show(lUsername.Text + BusinessLogicLayer.Texts.ErrorMessages.FieldIsEmpty, BusinessLogicLayer.Texts.Captions.EmptyRequiredField, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(lEmail.Text + BusinessLogicLayer.Texts.ErrorMessages.FieldIsEmpty, BusinessLogicLayer.Texts.Captions.EmptyRequiredField, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -44,16 +44,16 @@ namespace KiRA.GUI
 
                 _login = new Login();
 
-                if (!_login.LoginValidation(tbUsername.Text, tbPassword.Text))
+                if (!_login.LoginValidation(tbEmail.Text, tbPassword.Text))
                 {
-                    MessageBox.Show(BusinessLogicLayer.Texts.ErrorMessages.WrongUsernamePassword, BusinessLogicLayer.Texts.Captions.LoginFailed, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(BusinessLogicLayer.Texts.ErrorMessages.WrongEmailPassword, BusinessLogicLayer.Texts.Captions.LoginFailed, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     tbPassword.Text = string.Empty;
-                    tbUsername.Text = string.Empty;
+                    tbEmail.Text = string.Empty;
                     return;
                 }
 
                 HomePage _homepage = new HomePage();
-                LogInfo.UserName = tbUsername.Text;
+                LogInfo.Email = tbEmail.Text;
                 Hide();
                 _homepage.Show();
             }

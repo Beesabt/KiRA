@@ -19,9 +19,9 @@ namespace KiRA.GUI
             {
                 _settings = new Settings();
 
-                if (_settings.OldValueValidation(Texts.PersonProperties.Username, tbOldUsername.Text))
+                if (_settings.OldValueValidation(Texts.PersonProperties.Email, tbOldUsername.Text))
                 {
-                    MessageBox.Show(Texts.ErrorMessages.WrongOldUsername, Texts.Captions.WrongOldValue, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(Texts.ErrorMessages.WrongOldEmail, Texts.Captions.WrongOldValue, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     tbOldUsername.Text = string.Empty;
                     return;
                 }
@@ -40,14 +40,14 @@ namespace KiRA.GUI
 
                 if (tbNewUsername.Text == tbNewUsernameAgain.Text)
                 {
-                    MessageBox.Show(Texts.ErrorMessages.NewUsernamesMismatched, Texts.Captions.MissmatchadUsernames, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(Texts.ErrorMessages.NewEmailMismatched, Texts.Captions.MissmatchadEmails, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     tbNewUsernameAgain.Text = string.Empty;
                     return;
                 }
 
-                _settings.SetNewValue(Texts.PersonProperties.Username, tbOldUsername.Text, tbNewUsername.Text);
+                _settings.SetNewValue(Texts.PersonProperties.Email, tbOldUsername.Text, tbNewUsername.Text);
                 MessageBox.Show(Texts.InformationMessages.PasswordChanged, Texts.Captions.SuccessfulChange, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LogInfo.UserName = tbNewUsername.Text;
+                LogInfo.Email = tbNewUsername.Text;
                 tbOldUsername.Text = string.Empty;
                 tbNewUsername.Text = string.Empty;
                 tbNewUsernameAgain.Text = string.Empty;

@@ -4,7 +4,8 @@ namespace KiRA.BusinessLogicLayer
 {
     public static class LogInfo
     {
-        public static string UserID;
-        public static string UserName;
+        public static int UserID;
+        public static string Email;
+        public static bool AnnoyingMessage;
     }
 }

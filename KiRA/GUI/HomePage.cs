@@ -10,7 +10,7 @@ namespace KiRA.GUI
         int _mValX;
         int _mValY;
         public HomePage()
-        {
+        {           
             InitializeComponent();
         }
 
@@ -19,9 +19,10 @@ namespace KiRA.GUI
             try
             {
                 Home _home = new Home();
-                if (_home.DefaultLoginValidation(LogInfo.UserName))
+                if (LogInfo.AnnoyingMessage)
                 {
-                    MessageBox.Show(BusinessLogicLayer.Texts.ErrorMessages.DefaultUsernameOrPassword, BusinessLogicLayer.Texts.Captions.DefaultLoginParameters, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(BusinessLogicLayer.Texts.ErrorMessages.DefaultEmailOrPassword, BusinessLogicLayer.Texts.Captions.DefaultLoginParameters, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LogInfo.AnnoyingMessage = false;
                     return;
                 }
             }

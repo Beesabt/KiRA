@@ -33,8 +33,8 @@
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.lBrand = new System.Windows.Forms.Label();
             this.pLine = new System.Windows.Forms.Panel();
-            this.tbUsername = new System.Windows.Forms.TextBox();
-            this.lUsername = new System.Windows.Forms.Label();
+            this.tbEmail = new System.Windows.Forms.TextBox();
+            this.lEmail = new System.Windows.Forms.Label();
             this.lPassword = new System.Windows.Forms.Label();
             this.btnLang = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -99,28 +99,28 @@
             this.pLine.Size = new System.Drawing.Size(310, 2);
             this.pLine.TabIndex = 5;
             // 
-            // tbUsername
+            // tbEmail
             // 
-            this.tbUsername.BackColor = System.Drawing.Color.White;
-            this.tbUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbUsername.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.tbUsername.Location = new System.Drawing.Point(110, 275);
-            this.tbUsername.Margin = new System.Windows.Forms.Padding(2);
-            this.tbUsername.Name = "tbUsername";
-            this.tbUsername.Size = new System.Drawing.Size(310, 33);
-            this.tbUsername.TabIndex = 0;
+            this.tbEmail.BackColor = System.Drawing.Color.White;
+            this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tbEmail.Location = new System.Drawing.Point(110, 275);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(310, 33);
+            this.tbEmail.TabIndex = 0;
             // 
-            // lUsername
+            // lEmail
             // 
-            this.lUsername.AutoSize = true;
-            this.lUsername.BackColor = System.Drawing.Color.Transparent;
-            this.lUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lUsername.Location = new System.Drawing.Point(110, 251);
-            this.lUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lUsername.Name = "lUsername";
-            this.lUsername.Size = new System.Drawing.Size(97, 24);
-            this.lUsername.TabIndex = 7;
-            this.lUsername.Text = "Username";
+            this.lEmail.AutoSize = true;
+            this.lEmail.BackColor = System.Drawing.Color.Transparent;
+            this.lEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lEmail.Location = new System.Drawing.Point(110, 251);
+            this.lEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lEmail.Name = "lEmail";
+            this.lEmail.Size = new System.Drawing.Size(63, 24);
+            this.lEmail.TabIndex = 7;
+            this.lEmail.Text = "E-mail";
             // 
             // lPassword
             // 
@@ -133,6 +133,13 @@
             this.lPassword.Size = new System.Drawing.Size(92, 24);
             this.lPassword.TabIndex = 8;
             this.lPassword.Text = "Password";
+            // 
+            // btnLang
+            // 
+            this.btnLang.Location = new System.Drawing.Point(0, 0);
+            this.btnLang.Name = "btnLang";
+            this.btnLang.Size = new System.Drawing.Size(75, 23);
+            this.btnLang.TabIndex = 10;
             // 
             // btnExit
             // 
@@ -192,8 +199,8 @@
             this.Controls.Add(this.pHeader);
             this.Controls.Add(this.btnLang);
             this.Controls.Add(this.lPassword);
-            this.Controls.Add(this.lUsername);
-            this.Controls.Add(this.tbUsername);
+            this.Controls.Add(this.lEmail);
+            this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.pLine);
             this.Controls.Add(this.lBrand);
             this.Controls.Add(this.tbPassword);
@@ -215,8 +222,8 @@
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Label lBrand;
         private System.Windows.Forms.Panel pLine;
-        private System.Windows.Forms.TextBox tbUsername;
-        private System.Windows.Forms.Label lUsername;
+        private System.Windows.Forms.TextBox tbEmail;
+        private System.Windows.Forms.Label lEmail;
         private System.Windows.Forms.Label lPassword;
         private System.Windows.Forms.Button btnLang;
         private System.Windows.Forms.Button btnExit;

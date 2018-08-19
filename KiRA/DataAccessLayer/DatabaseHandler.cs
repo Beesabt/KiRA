@@ -132,19 +132,19 @@ namespace KiRA.DataAccessLayer
 
         #region Login.cs
 
-        public bool LoginValidationDB(string Username, string Password)
+        public bool LoginValidationDB(string Email, string Password)
         {
             bool isSuccess = false;
             string cmd = string.Format("SELECT COUNT({1}) FROM {0} WHERE {1}='{2}' and {3}='{4}'", BusinessLogicLayer.Texts.DataTableNames.Person,
-                BusinessLogicLayer.Texts.PersonProperties.Username, Username, BusinessLogicLayer.Texts.PersonProperties.Password, Password);
+                BusinessLogicLayer.Texts.PersonProperties.Email, Email, BusinessLogicLayer.Texts.PersonProperties.Password, Password);
             if (ExecuteScalar(cmd) != 0) isSuccess = true;
             return isSuccess;
         }
 
-        public int GetUserID(string Username, string Password)
+        public int GetUserID(string Email, string Password)
         {
             string cmd = string.Format("SELECT {0} FROM {1} WHERE {2}='{3}' AND {4}='{5}'", BusinessLogicLayer.Texts.PersonProperties.ID, BusinessLogicLayer.Texts.DataTableNames.Person,
-                 BusinessLogicLayer.Texts.PersonProperties.Username, Username, BusinessLogicLayer.Texts.PersonProperties.Password, Password);
+                 BusinessLogicLayer.Texts.PersonProperties.Email, Email, BusinessLogicLayer.Texts.PersonProperties.Password, Password);
             _iResult = ExecuteScalar(cmd);
             return _iResult;
         }
@@ -153,10 +153,10 @@ namespace KiRA.DataAccessLayer
 
         #region Home.cs
 
-        public string GetPassword(string Username)
+        public string GetPassword(string Email)
         {
             string cmd = string.Format("SELECT {0} FROM {1} WHERE {2}='{3}'", BusinessLogicLayer.Texts.PersonProperties.Password, BusinessLogicLayer.Texts.DataTableNames.Person,
-                 BusinessLogicLayer.Texts.PersonProperties.Username, Username);
+                 BusinessLogicLayer.Texts.PersonProperties.Email, Email);
             _sResult = GetString(cmd);
             return _sResult;
         }
