@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dgvTaskManager = new System.Windows.Forms.DataGridView();         
+            this.dgvTaskManager = new System.Windows.Forms.DataGridView();
             this.TaskID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TaskName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.taskBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnTaskModification = new System.Windows.Forms.Button();
-            this.lTaskManager = new System.Windows.Forms.Label();           
+            this.lTaskManager = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaskManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -102,10 +102,10 @@
             // lTaskManager
             // 
             this.lTaskManager.AutoSize = true;
-            this.lTaskManager.Font = new System.Drawing.Font("Metrostyle Extended", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lTaskManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lTaskManager.Location = new System.Drawing.Point(40, 42);
             this.lTaskManager.Name = "lTaskManager";
-            this.lTaskManager.Size = new System.Drawing.Size(254, 33);
+            this.lTaskManager.Size = new System.Drawing.Size(223, 37);
             this.lTaskManager.TabIndex = 2;
             this.lTaskManager.Text = "Task manager";
             // 
@@ -113,7 +113,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Snow;
             this.Controls.Add(this.lTaskManager);
             this.Controls.Add(this.dgvTaskManager);
             this.Controls.Add(this.btnTaskModification);

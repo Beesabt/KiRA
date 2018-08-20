@@ -31,20 +31,20 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsPage));
             this.pMenuBar = new System.Windows.Forms.Panel();
-            this.lTitle = new System.Windows.Forms.Label();
-            this.pHeader = new System.Windows.Forms.Panel();
-            this.pSettings = new System.Windows.Forms.FlowLayoutPanel();
-            this.UCtaskManager = new KiRA.GUI.TaskManager();
-            this.UCpersonalInformation = new KiRA.GUI.PersonalInformation();
-            this.UCusernameChange = new KiRA.GUI.EmailChange();
-            this.UCpasswordChange = new KiRA.GUI.PasswordChange();
             this.btnPersonalInformation = new System.Windows.Forms.Button();
             this.btnTaskManager = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnPassword = new System.Windows.Forms.Button();
             this.btnUsername = new System.Windows.Forms.Button();
+            this.lTitle = new System.Windows.Forms.Label();
+            this.pHeader = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.pSettings = new System.Windows.Forms.FlowLayoutPanel();
+            this.UCtaskManager = new KiRA.GUI.TaskManager();
+            this.UCpersonalInformation = new KiRA.GUI.PersonalInformation();
+            this.UCusernameChange = new KiRA.GUI.EmailChange();
+            this.UCpasswordChange = new KiRA.GUI.PasswordChange();
             this.taskBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pMenuBar.SuspendLayout();
             this.pHeader.SuspendLayout();
@@ -65,78 +65,6 @@
             this.pMenuBar.Name = "pMenuBar";
             this.pMenuBar.Size = new System.Drawing.Size(1030, 85);
             this.pMenuBar.TabIndex = 1;
-            // 
-            // lTitle
-            // 
-            this.lTitle.AutoSize = true;
-            this.lTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.lTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lTitle.ForeColor = System.Drawing.Color.White;
-            this.lTitle.Location = new System.Drawing.Point(0, 0);
-            this.lTitle.Name = "lTitle";
-            this.lTitle.Size = new System.Drawing.Size(295, 29);
-            this.lTitle.TabIndex = 2;
-            this.lTitle.Text = "KiRA - Munkaidő Kezelő";
-            // 
-            // pHeader
-            // 
-            this.pHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.pHeader.Controls.Add(this.btnMinimize);
-            this.pHeader.Controls.Add(this.btnExit);
-            this.pHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pHeader.Location = new System.Drawing.Point(0, 0);
-            this.pHeader.Name = "pHeader";
-            this.pHeader.Size = new System.Drawing.Size(1030, 30);
-            this.pHeader.TabIndex = 0;
-            this.pHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pHeader_MouseDown);
-            this.pHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pHeader_MouseMove);
-            this.pHeader.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pHeader_MouseUp);
-            // 
-            // pSettings
-            // 
-            this.pSettings.Controls.Add(this.UCtaskManager);
-            this.pSettings.Controls.Add(this.UCpersonalInformation);
-            this.pSettings.Controls.Add(this.UCusernameChange);
-            this.pSettings.Controls.Add(this.UCpasswordChange);
-            this.pSettings.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pSettings.Location = new System.Drawing.Point(0, 115);
-            this.pSettings.Name = "pSettings";
-            this.pSettings.Size = new System.Drawing.Size(1030, 535);
-            this.pSettings.TabIndex = 2;
-            // 
-            // UCtaskManager
-            // 
-            this.UCtaskManager.BackColor = System.Drawing.Color.White;
-            this.UCtaskManager.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.UCtaskManager.Location = new System.Drawing.Point(3, 3);
-            this.UCtaskManager.Name = "UCtaskManager";
-            this.UCtaskManager.Size = new System.Drawing.Size(1030, 535);
-            this.UCtaskManager.TabIndex = 3;
-            // 
-            // UCpersonalInformation
-            // 
-            this.UCpersonalInformation.BackColor = System.Drawing.Color.White;
-            this.UCpersonalInformation.Location = new System.Drawing.Point(3, 544);
-            this.UCpersonalInformation.Name = "UCpersonalInformation";
-            this.UCpersonalInformation.Size = new System.Drawing.Size(1030, 535);
-            this.UCpersonalInformation.TabIndex = 2;
-            // 
-            // UCusernameChange
-            // 
-            this.UCusernameChange.BackColor = System.Drawing.Color.White;
-            this.UCusernameChange.Location = new System.Drawing.Point(3, 1085);
-            this.UCusernameChange.Name = "UCusernameChange";
-            this.UCusernameChange.Size = new System.Drawing.Size(1030, 535);
-            this.UCusernameChange.TabIndex = 1;
-            // 
-            // UCpasswordChange
-            // 
-            this.UCpasswordChange.BackColor = System.Drawing.Color.White;
-            this.UCpasswordChange.Location = new System.Drawing.Point(3, 1626);
-            this.UCpasswordChange.Name = "UCpasswordChange";
-            this.UCpasswordChange.Size = new System.Drawing.Size(1030, 535);
-            this.UCpasswordChange.TabIndex = 0;
             // 
             // btnPersonalInformation
             // 
@@ -240,6 +168,33 @@
             this.btnUsername.UseVisualStyleBackColor = false;
             this.btnUsername.Click += new System.EventHandler(this.btnUsername_Click);
             // 
+            // lTitle
+            // 
+            this.lTitle.AutoSize = true;
+            this.lTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.lTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lTitle.ForeColor = System.Drawing.Color.White;
+            this.lTitle.Location = new System.Drawing.Point(0, 0);
+            this.lTitle.Name = "lTitle";
+            this.lTitle.Size = new System.Drawing.Size(295, 29);
+            this.lTitle.TabIndex = 2;
+            this.lTitle.Text = "KiRA - Munkaidő Kezelő";
+            // 
+            // pHeader
+            // 
+            this.pHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.pHeader.Controls.Add(this.btnMinimize);
+            this.pHeader.Controls.Add(this.btnExit);
+            this.pHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pHeader.Location = new System.Drawing.Point(0, 0);
+            this.pHeader.Name = "pHeader";
+            this.pHeader.Size = new System.Drawing.Size(1030, 30);
+            this.pHeader.TabIndex = 0;
+            this.pHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pHeader_MouseDown);
+            this.pHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pHeader_MouseMove);
+            this.pHeader.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pHeader_MouseUp);
+            // 
             // btnMinimize
             // 
             this.btnMinimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimize.BackgroundImage")));
@@ -269,6 +224,51 @@
             this.btnExit.TabIndex = 0;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // pSettings
+            // 
+            this.pSettings.Controls.Add(this.UCtaskManager);
+            this.pSettings.Controls.Add(this.UCpersonalInformation);
+            this.pSettings.Controls.Add(this.UCusernameChange);
+            this.pSettings.Controls.Add(this.UCpasswordChange);
+            this.pSettings.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pSettings.Location = new System.Drawing.Point(0, 115);
+            this.pSettings.Name = "pSettings";
+            this.pSettings.Size = new System.Drawing.Size(1030, 535);
+            this.pSettings.TabIndex = 2;
+            // 
+            // UCtaskManager
+            // 
+            this.UCtaskManager.BackColor = System.Drawing.Color.Snow;
+            this.UCtaskManager.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.UCtaskManager.Location = new System.Drawing.Point(3, 3);
+            this.UCtaskManager.Name = "UCtaskManager";
+            this.UCtaskManager.Size = new System.Drawing.Size(1030, 535);
+            this.UCtaskManager.TabIndex = 3;
+            // 
+            // UCpersonalInformation
+            // 
+            this.UCpersonalInformation.BackColor = System.Drawing.Color.White;
+            this.UCpersonalInformation.Location = new System.Drawing.Point(3, 544);
+            this.UCpersonalInformation.Name = "UCpersonalInformation";
+            this.UCpersonalInformation.Size = new System.Drawing.Size(1030, 535);
+            this.UCpersonalInformation.TabIndex = 2;
+            // 
+            // UCusernameChange
+            // 
+            this.UCusernameChange.BackColor = System.Drawing.Color.White;
+            this.UCusernameChange.Location = new System.Drawing.Point(3, 1085);
+            this.UCusernameChange.Name = "UCusernameChange";
+            this.UCusernameChange.Size = new System.Drawing.Size(1030, 535);
+            this.UCusernameChange.TabIndex = 1;
+            // 
+            // UCpasswordChange
+            // 
+            this.UCpasswordChange.BackColor = System.Drawing.Color.White;
+            this.UCpasswordChange.Location = new System.Drawing.Point(3, 1626);
+            this.UCpasswordChange.Name = "UCpasswordChange";
+            this.UCpasswordChange.Size = new System.Drawing.Size(1030, 535);
+            this.UCpasswordChange.TabIndex = 0;
             // 
             // SettingsPage
             // 
