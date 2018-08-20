@@ -111,6 +111,62 @@
                 }
             }
 
+            public static string UserIDDoesNotExistOrTableIsEmpty
+            {
+                get
+                {
+                    return " table is empty or the user with the ID does not exist!";
+                }
+            }
+
+            public static string NumericField
+            {
+                get
+                {
+                    return " is a numeric field.";
+                }
+            }
+
+            public static string WorkNotAllowed15
+            {
+                get
+                {
+                    return "Work is not allowed for 15 years old or younger";
+                }
+            }
+
+            public static string WorkNotAllowed100
+            {
+                get
+                {
+                    return "Work is not allowed for 100 years old or older";
+                }
+            }
+
+            public static string StartOfDateTooSmall
+            {
+                get
+                {
+                    return "Start of date can not be smaller than the birth of date.";
+                }
+            }
+
+            public static string BiggerNumberThanNumberOfChildren
+            {
+                get
+                {
+                    return " can not be bigger number than the number of the children.";
+                }
+            }
+
+            public static string DiabledAndNewBornBigger
+            {
+                get
+                {
+                    return "Sum of the disabled children and new born babies can not be bigger number than the number of the children.";
+                }
+            }
+
             public static string WrongOldPassword
             {
                 get
@@ -223,7 +279,6 @@
                 }
             }
 
-
             public static string EmptyRequiredField
             {
                 get
@@ -237,6 +292,46 @@
                 get
                 {
                     return "Default login parameters";
+                }
+            }
+
+            public static string PersonalInformationError
+            {
+                get
+                {
+                    return "Personal information error";
+                }
+            }
+
+            public static string NumericField
+            {
+                get
+                {
+                    return "Numeric field";
+                }
+            }
+
+            public static string BirthOfDateError
+            {
+                get
+                {
+                    return "Birth of date error";
+                }
+            }
+
+            public static string StartOfDateError
+            {
+                get
+                {
+                    return "Start of date error";
+                }
+            }
+
+            public static string NumberOfTheChildrenError
+            {
+                get
+                {
+                    return "Number of the children error";
                 }
             }
 
