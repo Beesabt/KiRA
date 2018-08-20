@@ -60,7 +60,7 @@
             this.tlpPersonalInformation.Controls.Add(this.lNameFromDatabase, 1, 0);
             this.tlpPersonalInformation.Controls.Add(this.lRegisterNumberFromDatabase, 1, 1);
             this.tlpPersonalInformation.Controls.Add(this.lCompanyFromDatabase, 1, 2);
-            this.tlpPersonalInformation.Font = new System.Drawing.Font("Metrostyle Extended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tlpPersonalInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tlpPersonalInformation.Location = new System.Drawing.Point(115, 158);
             this.tlpPersonalInformation.Name = "tlpPersonalInformation";
             this.tlpPersonalInformation.RowCount = 5;
@@ -179,10 +179,10 @@
             // lPersonalInformation
             // 
             this.lPersonalInformation.AutoSize = true;
-            this.lPersonalInformation.Font = new System.Drawing.Font("Metrostyle Extended", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lPersonalInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lPersonalInformation.Location = new System.Drawing.Point(109, 68);
             this.lPersonalInformation.Name = "lPersonalInformation";
-            this.lPersonalInformation.Size = new System.Drawing.Size(360, 33);
+            this.lPersonalInformation.Size = new System.Drawing.Size(312, 37);
             this.lPersonalInformation.TabIndex = 2;
             this.lPersonalInformation.Text = "Personal information";
             // 
@@ -207,12 +207,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Snow;
             this.Controls.Add(this.btnChangeData);
             this.Controls.Add(this.lPersonalInformation);
             this.Controls.Add(this.tlpPersonalInformation);
             this.Name = "PersonalInformation";
             this.Size = new System.Drawing.Size(1030, 535);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.tlpPersonalInformation_Paint);
             this.tlpPersonalInformation.ResumeLayout(false);
             this.tlpPersonalInformation.PerformLayout();
             this.ResumeLayout(false);

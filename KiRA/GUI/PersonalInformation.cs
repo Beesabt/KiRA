@@ -25,12 +25,11 @@ namespace KiRA.GUI
 
                 _person = _settings.GetPersonalInformation();
 
-                if(!string.IsNullOrEmpty(_person.Name)) { lNameFromDatabase.Text = _person.Name; }
+                if (!string.IsNullOrEmpty(_person.Name)) { lNameFromDatabase.Text = _person.Name; }
                 lRegisterNumberFromDatabase.Text = _person.RegisterNumber.ToString();
                 if (!string.IsNullOrEmpty(_person.Company)) { lCompanyFromDatabase.Text = _person.Company; }
                 if (!string.IsNullOrEmpty(_person.CostCenter)) { lCostCenterFromDatabase.Text = _person.CostCenter; }
                 if (!string.IsNullOrEmpty(_person.Position)) { lPositionFromDatabase.Text = _person.Position; }
-                
             }
             catch (Exception error)
             {
@@ -42,7 +41,15 @@ namespace KiRA.GUI
         {
             try
             {
-             
+                if (_person.Name == null)
+                {
+                    MessageBox.Show(Texts.DataTableNames.Person + Texts.ErrorMessages.UserIDDoesNotExistOrTableIsEmpty, Texts.Captions.PersonalInformationError, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    btnChangeData.Enabled = false;
+                    return;
+                }
+                PersonalDataChangePage _dataChangePage = new PersonalDataChangePage();
+                _dataChangePage.ShowDialog();
+                tlpPersonalInformation.Invalidate();
             }
             catch (Exception error)
             {
