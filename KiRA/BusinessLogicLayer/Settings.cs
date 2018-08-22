@@ -190,7 +190,7 @@ namespace KiRA.BusinessLogicLayer
         {
             _DBHandler = new DatabaseHandler();
             _bIsSuccess = _DBHandler.OldValueValidationDB(Key, Value);
-            return _bIsSuccess;          
+            return _bIsSuccess;
         }
 
         public bool IsValidPassword(string newPassword)
@@ -198,7 +198,7 @@ namespace KiRA.BusinessLogicLayer
             Regex _NumberRegex = new Regex(@"[0-9]+");
             Regex _UpperCharRegex = new Regex(@"[A-Z]+");
             Regex _Minimum8CharsRegex = new Regex(@".{8,}");
-            _bIsSuccess = _NumberRegex.IsMatch(newPassword) && _UpperCharRegex.IsMatch(newPassword) && _Minimum8CharsRegex.IsMatch(newPassword);           
+            _bIsSuccess = _NumberRegex.IsMatch(newPassword) && _UpperCharRegex.IsMatch(newPassword) && _Minimum8CharsRegex.IsMatch(newPassword);
             return _bIsSuccess;
         }
 
