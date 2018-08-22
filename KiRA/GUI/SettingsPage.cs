@@ -1,17 +1,14 @@
-﻿using KiRA.ValueObjects;
-using System;
+﻿using System;
 using System.Windows.Forms;
-using System.Data;
-using KiRA.BusinessLogicLayer;
-using KiRA.GUI;
 
 namespace KiRA.GUI
 {
     public partial class SettingsPage : Form
     {
-        int _togMove;
-        int _mValX;
-        int _mValY;
+        bool _bTogMove;
+        int _iValX;
+        int _iValY;
+
         public SettingsPage()
         {
             InitializeComponent();
@@ -29,31 +26,6 @@ namespace KiRA.GUI
             }
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnMinimize_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void btnTaskManager_Click(object sender, EventArgs e)
-        {
-            UCtaskManager.BringToFront();            
-        }
-
-        private void btnUsername_Click(object sender, EventArgs e)
-        {
-           UCusernameChange.BringToFront(); 
-        }
-
-        private void btnPassword_Click(object sender, EventArgs e)
-        {
-           UCpasswordChange.BringToFront(); 
-        }
-
         private void btnHome_Click(object sender, EventArgs e)
         {
             Hide();
@@ -66,23 +38,48 @@ namespace KiRA.GUI
             UCpersonalInformation.BringToFront();
         }
 
+        private void btnPassword_Click(object sender, EventArgs e)
+        {
+            UCpasswordChange.BringToFront();
+        }
+
+        private void btnEmail_Click(object sender, EventArgs e)
+        {
+            UCusernameChange.BringToFront();
+        }
+
+        private void btnTaskManager_Click(object sender, EventArgs e)
+        {
+            UCtaskManager.BringToFront();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
         private void pHeader_MouseUp(object sender, MouseEventArgs e)
         {
-            _togMove = 0;
+            _bTogMove = false;
         }
 
         private void pHeader_MouseDown(object sender, MouseEventArgs e)
         {
-            _togMove = 1;
-            _mValX = e.X;
-            _mValY = e.Y;
+            _bTogMove = true;
+            _iValX = e.X;
+            _iValY = e.Y;
         }
 
         private void pHeader_MouseMove(object sender, MouseEventArgs e)
         {
-            if (_togMove == 1)
+            if (_bTogMove)
             {
-                SetDesktopLocation(MousePosition.X - _mValX, MousePosition.Y - _mValY);
+                SetDesktopLocation(MousePosition.X - _iValX, MousePosition.Y - _iValY);
             }
         }
 

@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsPage));
             this.pMenuBar = new System.Windows.Forms.Panel();
             this.btnPersonalInformation = new System.Windows.Forms.Button();
             this.btnTaskManager = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnPassword = new System.Windows.Forms.Button();
-            this.btnUsername = new System.Windows.Forms.Button();
+            this.btnEmail = new System.Windows.Forms.Button();
             this.lTitle = new System.Windows.Forms.Label();
             this.pHeader = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
@@ -45,11 +44,9 @@
             this.UCpersonalInformation = new KiRA.GUI.PersonalInformation();
             this.UCusernameChange = new KiRA.GUI.EmailChange();
             this.UCpasswordChange = new KiRA.GUI.PasswordChange();
-            this.taskBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pMenuBar.SuspendLayout();
             this.pHeader.SuspendLayout();
             this.pSettings.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pMenuBar
@@ -59,7 +56,7 @@
             this.pMenuBar.Controls.Add(this.btnTaskManager);
             this.pMenuBar.Controls.Add(this.btnBack);
             this.pMenuBar.Controls.Add(this.btnPassword);
-            this.pMenuBar.Controls.Add(this.btnUsername);
+            this.pMenuBar.Controls.Add(this.btnEmail);
             this.pMenuBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pMenuBar.Location = new System.Drawing.Point(0, 30);
             this.pMenuBar.Name = "pMenuBar";
@@ -147,26 +144,26 @@
             this.btnPassword.UseVisualStyleBackColor = false;
             this.btnPassword.Click += new System.EventHandler(this.btnPassword_Click);
             // 
-            // btnUsername
+            // btnEmail
             // 
-            this.btnUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(185)))), ((int)(((byte)(0)))));
-            this.btnUsername.FlatAppearance.BorderSize = 0;
-            this.btnUsername.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
-            this.btnUsername.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
-            this.btnUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsername.ForeColor = System.Drawing.Color.White;
-            this.btnUsername.Image = global::KiRA.Properties.Resources.email_icon_white_501;
-            this.btnUsername.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsername.Location = new System.Drawing.Point(540, 0);
-            this.btnUsername.Margin = new System.Windows.Forms.Padding(1);
-            this.btnUsername.Name = "btnUsername";
-            this.btnUsername.Size = new System.Drawing.Size(180, 85);
-            this.btnUsername.TabIndex = 4;
-            this.btnUsername.Text = "E-mail\r\nchange";
-            this.btnUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUsername.UseVisualStyleBackColor = false;
-            this.btnUsername.Click += new System.EventHandler(this.btnUsername_Click);
+            this.btnEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(185)))), ((int)(((byte)(0)))));
+            this.btnEmail.FlatAppearance.BorderSize = 0;
+            this.btnEmail.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
+            this.btnEmail.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
+            this.btnEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmail.ForeColor = System.Drawing.Color.White;
+            this.btnEmail.Image = global::KiRA.Properties.Resources.email_icon_white_50;
+            this.btnEmail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmail.Location = new System.Drawing.Point(540, 0);
+            this.btnEmail.Margin = new System.Windows.Forms.Padding(1);
+            this.btnEmail.Name = "btnEmail";
+            this.btnEmail.Size = new System.Drawing.Size(180, 85);
+            this.btnEmail.TabIndex = 4;
+            this.btnEmail.Text = "E-mail\r\nchange";
+            this.btnEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEmail.UseVisualStyleBackColor = false;
+            this.btnEmail.Click += new System.EventHandler(this.btnEmail_Click);
             // 
             // lTitle
             // 
@@ -197,15 +194,15 @@
             // 
             // btnMinimize
             // 
-            this.btnMinimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimize.BackgroundImage")));
+            this.btnMinimize.BackgroundImage = global::KiRA.Properties.Resources.subtract_icon_white_26;
             this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Location = new System.Drawing.Point(970, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(930, 0);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(30, 30);
+            this.btnMinimize.Size = new System.Drawing.Size(50, 30);
             this.btnMinimize.TabIndex = 3;
             this.btnMinimize.UseVisualStyleBackColor = true;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
@@ -218,9 +215,9 @@
             this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Location = new System.Drawing.Point(1000, 0);
+            this.btnExit.Location = new System.Drawing.Point(980, 0);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(30, 30);
+            this.btnExit.Size = new System.Drawing.Size(50, 30);
             this.btnExit.TabIndex = 0;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -240,8 +237,8 @@
             // UCtaskManager
             // 
             this.UCtaskManager.BackColor = System.Drawing.Color.Snow;
-            this.UCtaskManager.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.UCtaskManager.Location = new System.Drawing.Point(3, 3);
+            this.UCtaskManager.Location = new System.Drawing.Point(0, 0);
+            this.UCtaskManager.Margin = new System.Windows.Forms.Padding(0);
             this.UCtaskManager.Name = "UCtaskManager";
             this.UCtaskManager.Size = new System.Drawing.Size(1030, 535);
             this.UCtaskManager.TabIndex = 3;
@@ -249,7 +246,7 @@
             // UCpersonalInformation
             // 
             this.UCpersonalInformation.BackColor = System.Drawing.Color.White;
-            this.UCpersonalInformation.Location = new System.Drawing.Point(3, 544);
+            this.UCpersonalInformation.Location = new System.Drawing.Point(3, 538);
             this.UCpersonalInformation.Name = "UCpersonalInformation";
             this.UCpersonalInformation.Size = new System.Drawing.Size(1030, 535);
             this.UCpersonalInformation.TabIndex = 2;
@@ -257,7 +254,7 @@
             // UCusernameChange
             // 
             this.UCusernameChange.BackColor = System.Drawing.Color.White;
-            this.UCusernameChange.Location = new System.Drawing.Point(3, 1085);
+            this.UCusernameChange.Location = new System.Drawing.Point(3, 1079);
             this.UCusernameChange.Name = "UCusernameChange";
             this.UCusernameChange.Size = new System.Drawing.Size(1030, 535);
             this.UCusernameChange.TabIndex = 1;
@@ -265,7 +262,7 @@
             // UCpasswordChange
             // 
             this.UCpasswordChange.BackColor = System.Drawing.Color.White;
-            this.UCpasswordChange.Location = new System.Drawing.Point(3, 1626);
+            this.UCpasswordChange.Location = new System.Drawing.Point(3, 1620);
             this.UCpasswordChange.Name = "UCpasswordChange";
             this.UCpasswordChange.Size = new System.Drawing.Size(1030, 535);
             this.UCpasswordChange.TabIndex = 0;
@@ -286,7 +283,6 @@
             this.pMenuBar.ResumeLayout(false);
             this.pHeader.ResumeLayout(false);
             this.pSettings.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,10 +291,9 @@
         #endregion
         private System.Windows.Forms.Panel pMenuBar;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.BindingSource taskBindingSource;
         private System.Windows.Forms.Button btnTaskManager;
         private System.Windows.Forms.Button btnPassword;
-        private System.Windows.Forms.Button btnUsername;
+        private System.Windows.Forms.Button btnEmail;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Label lTitle;
