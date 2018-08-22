@@ -1,9 +1,9 @@
-﻿using System;
+﻿using KiRA.BusinessLogicLayer;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
 using System.Windows.Forms;
-using KiRA.BusinessLogicLayer;
 
 namespace KiRA.DataAccessLayer
 {
