@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using KiRA.BusinessLogicLayer;
 using KiRA.ValueObjects;
+using System.Drawing;
 
 namespace KiRA.GUI
 {
@@ -55,6 +56,13 @@ namespace KiRA.GUI
             {
                 MessageBox.Show(error.Message + "\r\n\r\n" + error.GetBaseException().ToString(), error.GetType().ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            Rectangle borderRectangle = new Rectangle(0, 0, ClientRectangle.Width - 1, ClientRectangle.Height - 1);
+            e.Graphics.DrawRectangle(Pens.Black, borderRectangle);
+            base.OnPaint(e);
         }
 
     }

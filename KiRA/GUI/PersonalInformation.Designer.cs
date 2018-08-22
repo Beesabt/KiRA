@@ -211,6 +211,7 @@
             this.Controls.Add(this.btnChangeData);
             this.Controls.Add(this.lPersonalInformation);
             this.Controls.Add(this.tlpPersonalInformation);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "PersonalInformation";
             this.Size = new System.Drawing.Size(1030, 535);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.tlpPersonalInformation_Paint);
