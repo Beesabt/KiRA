@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonalDataChangePage));
             this.pHeader = new System.Windows.Forms.Panel();
             this.lDataChange = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
@@ -103,15 +102,15 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
+            this.btnExit.BackgroundImage = global::KiRA.Properties.Resources.close_icon_white_26;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Location = new System.Drawing.Point(650, 0);
+            this.btnExit.Location = new System.Drawing.Point(630, 0);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(30, 30);
+            this.btnExit.Size = new System.Drawing.Size(50, 30);
             this.btnExit.TabIndex = 3;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -515,7 +514,7 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // DataChangePage
+            // PersonalDataChangePage
             // 
             this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -530,7 +529,7 @@
             this.Controls.Add(this.gbPersonalInformation);
             this.Controls.Add(this.pHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "DataChangePage";
+            this.Name = "PersonalDataChangePage";
             this.Text = "DataChangePage";
             this.Load += new System.EventHandler(this.DataChangePage_Load);
             this.pHeader.ResumeLayout(false);
