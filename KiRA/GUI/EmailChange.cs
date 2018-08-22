@@ -1,7 +1,8 @@
-﻿using System;
-using System.Windows.Forms;
-using KiRA.BusinessLogicLayer;
+﻿using KiRA.BusinessLogicLayer;
+using System;
 using System.ComponentModel.DataAnnotations;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace KiRA.GUI
 {
@@ -87,6 +88,12 @@ namespace KiRA.GUI
             }
         }
 
-       
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            Rectangle borderRectangle = new Rectangle(0, 0, ClientRectangle.Width - 1, ClientRectangle.Height - 1);
+            e.Graphics.DrawRectangle(Pens.Black, borderRectangle);
+            base.OnPaint(e);
+        }
+
     }
 }

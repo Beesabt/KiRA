@@ -134,6 +134,7 @@
             this.Controls.Add(this.tbNewEmail);
             this.Controls.Add(this.lNewEmailAgain);
             this.Controls.Add(this.tbOldEmail);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "EmailChange";
             this.Size = new System.Drawing.Size(1030, 535);
             this.ResumeLayout(false);
