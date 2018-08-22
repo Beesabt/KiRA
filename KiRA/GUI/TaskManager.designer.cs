@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvTaskManager = new System.Windows.Forms.DataGridView();
-            this.TaskID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TaskName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.taskBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnTaskModification = new System.Windows.Forms.Button();
             this.lTaskManager = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaskManager)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvTaskManager
@@ -46,12 +43,27 @@
             this.dgvTaskManager.AllowUserToOrderColumns = true;
             this.dgvTaskManager.AllowUserToResizeColumns = false;
             this.dgvTaskManager.AllowUserToResizeRows = false;
-            this.dgvTaskManager.AutoGenerateColumns = false;
-            this.dgvTaskManager.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TaskID,
-            this.TaskName});
+            this.dgvTaskManager.BackgroundColor = System.Drawing.Color.White;
+            this.dgvTaskManager.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvTaskManager.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTaskManager.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTaskManager.Cursor = System.Windows.Forms.Cursors.No;
-            this.dgvTaskManager.DataSource = this.taskBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTaskManager.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvTaskManager.EnableHeadersVisualStyles = false;
             this.dgvTaskManager.Location = new System.Drawing.Point(46, 101);
             this.dgvTaskManager.Name = "dgvTaskManager";
             this.dgvTaskManager.ReadOnly = true;
@@ -61,26 +73,6 @@
             this.dgvTaskManager.Size = new System.Drawing.Size(942, 409);
             this.dgvTaskManager.TabIndex = 1;
             this.dgvTaskManager.VirtualMode = true;
-            // 
-            // TaskID
-            // 
-            this.TaskID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TaskID.DataPropertyName = "TaskID";
-            this.TaskID.HeaderText = "Task ID";
-            this.TaskID.Name = "TaskID";
-            this.TaskID.ReadOnly = true;
-            // 
-            // TaskName
-            // 
-            this.TaskName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TaskName.DataPropertyName = "TaskName";
-            this.TaskName.HeaderText = "Task name";
-            this.TaskName.Name = "TaskName";
-            this.TaskName.ReadOnly = true;
-            // 
-            // taskBindingSource
-            // 
-            this.taskBindingSource.DataMember = "Task";
             // 
             // btnTaskModification
             // 
@@ -120,7 +112,6 @@
             this.Name = "TaskManager";
             this.Size = new System.Drawing.Size(1030, 535);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaskManager)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,8 +121,5 @@
         private System.Windows.Forms.DataGridView dgvTaskManager;
         private System.Windows.Forms.Button btnTaskModification;
         private System.Windows.Forms.Label lTaskManager;      
-        private System.Windows.Forms.BindingSource taskBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TaskID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TaskName;
     }
 }
