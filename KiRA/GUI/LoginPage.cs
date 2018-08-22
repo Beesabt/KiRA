@@ -10,9 +10,9 @@ namespace KiRA.GUI
 {
     public partial class LoginPage : Form
     {
-        int _togMove;
-        int _mValX;
-        int _mValY;
+        bool _bTogMove;
+        int _iValX;
+        int _iValY;
         Login _login;
 
         public LoginPage()
@@ -61,7 +61,7 @@ namespace KiRA.GUI
             {
                 MessageBox.Show(error.Message + "\r\n\r\n" + error.GetBaseException().ToString(), error.GetType().ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);              
             }
-        }      
+        }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -75,22 +75,29 @@ namespace KiRA.GUI
 
         private void pHeader_MouseUp(object sender, MouseEventArgs e)
         {
-            _togMove = 0;
+            _bTogMove = false;
         }
 
         private void pHeader_MouseDown(object sender, MouseEventArgs e)
         {
-            _togMove = 1;
-            _mValX = e.X;
-            _mValY = e.Y;
+            _bTogMove = true;
+            _iValX = e.X;
+            _iValY = e.Y;
         }
 
         private void pHeader_MouseMove(object sender, MouseEventArgs e)
         {
-            if (_togMove == 1)
+            if (_bTogMove)
             {
-                SetDesktopLocation(MousePosition.X - _mValX, MousePosition.Y - _mValY);
+                SetDesktopLocation(MousePosition.X - _iValX, MousePosition.Y - _iValY);
             }
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            Rectangle borderRectangle = new Rectangle(0, 0, ClientRectangle.Width - 1, ClientRectangle.Height - 1);
+            e.Graphics.DrawRectangle(Pens.Black, borderRectangle);
+            base.OnPaint(e);
         }
 
     }

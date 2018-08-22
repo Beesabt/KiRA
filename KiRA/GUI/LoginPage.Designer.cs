@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPage));
             this.btnLogin = new System.Windows.Forms.Button();
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.lBrand = new System.Windows.Forms.Label();
@@ -144,16 +143,16 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
+            this.btnExit.BackgroundImage = global::KiRA.Properties.Resources.close_icon_white_26;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Location = new System.Drawing.Point(500, 0);
+            this.btnExit.Location = new System.Drawing.Point(480, 0);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(30, 30);
+            this.btnExit.Size = new System.Drawing.Size(50, 30);
             this.btnExit.TabIndex = 1;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -161,15 +160,15 @@
             // btnMinimalize
             // 
             this.btnMinimalize.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinimalize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimalize.BackgroundImage")));
+            this.btnMinimalize.BackgroundImage = global::KiRA.Properties.Resources.subtract_icon_white_26;
             this.btnMinimalize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnMinimalize.FlatAppearance.BorderSize = 0;
             this.btnMinimalize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnMinimalize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnMinimalize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimalize.Location = new System.Drawing.Point(470, 0);
+            this.btnMinimalize.Location = new System.Drawing.Point(430, 0);
             this.btnMinimalize.Name = "btnMinimalize";
-            this.btnMinimalize.Size = new System.Drawing.Size(30, 30);
+            this.btnMinimalize.Size = new System.Drawing.Size(50, 30);
             this.btnMinimalize.TabIndex = 0;
             this.btnMinimalize.UseVisualStyleBackColor = false;
             this.btnMinimalize.Click += new System.EventHandler(this.btnMinimalize_Click);
