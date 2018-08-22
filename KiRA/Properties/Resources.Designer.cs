@@ -93,9 +93,9 @@ namespace KiRA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap email_icon_white_50 {
+        internal static System.Drawing.Bitmap close_icon_white_26 {
             get {
-                object obj = ResourceManager.GetObject("email_icon_white_50", resourceCulture);
+                object obj = ResourceManager.GetObject("close_icon_white_26", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace KiRA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap email_icon_white_501 {
+        internal static System.Drawing.Bitmap email_icon_white_50 {
             get {
-                object obj = ResourceManager.GetObject("email_icon_white_501", resourceCulture);
+                object obj = ResourceManager.GetObject("email_icon_white_50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,29 @@ namespace KiRA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap restore_icon_white_26 {
+            get {
+                object obj = ResourceManager.GetObject("restore_icon_white_26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap settings_icon_white_50 {
             get {
                 object obj = ResourceManager.GetObject("settings_icon_white_50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap subtract_icon_white_26 {
+            get {
+                object obj = ResourceManager.GetObject("subtract_icon_white_26", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
