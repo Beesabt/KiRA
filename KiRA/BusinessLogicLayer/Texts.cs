@@ -1,4 +1,5 @@
-﻿namespace KiRA.BusinessLogicLayer
+﻿
+namespace KiRA.BusinessLogicLayer
 {
     public static class Texts
     {
