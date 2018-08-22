@@ -1,16 +1,18 @@
 ﻿using KiRA.BusinessLogicLayer;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace KiRA.GUI
 {
     public partial class HomePage : Form
     {
-        int _togMove;
-        int _mValX;
-        int _mValY;
+        bool _bTogMove;
+        int _iValX;
+        int _iValY;
+
         public HomePage()
-        {           
+        {
             InitializeComponent();
         }
 
@@ -18,7 +20,6 @@ namespace KiRA.GUI
         {
             try
             {
-                Home _home = new Home();
                 if (LogInfo.AnnoyingMessage)
                 {
                     MessageBox.Show(BusinessLogicLayer.Texts.ErrorMessages.DefaultEmailOrPassword, BusinessLogicLayer.Texts.Captions.DefaultLoginParameters, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -32,6 +33,34 @@ namespace KiRA.GUI
             }
         }
 
+        private void btnWorkingHours_Click(object sender, EventArgs e)
+        {
+            //Hide();
+            //WorkingHoursPage _workingHoursPage = new WorkingHoursPage();
+            //_workingHoursPage.Show();
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            Hide();
+            SettingsPage _settingsPage = new SettingsPage();
+            _settingsPage.Show();
+        }
+
+        private void btnHolidays_Click(object sender, EventArgs e)
+        {
+            //Hide();
+            //HolidaysPage _holidaysPage = new HolidaysPage();
+            //_holidaysPage.Show();
+        }
+
+        private void btnStatistics_Click(object sender, EventArgs e)
+        {
+            //Hide();
+            //StatisticsPage _statisticsPage = new StatisticsPage();
+            //_statisticsPage.Show();
+        }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -42,52 +71,32 @@ namespace KiRA.GUI
             WindowState = FormWindowState.Minimized;
         }
 
-        private void btnSettings_Click(object sender, EventArgs e)
-        {
-            Hide();
-            SettingsPage _settingsPage = new SettingsPage();
-            _settingsPage.Show();
-        }
-
-        private void btnStatistics_Click(object sender, EventArgs e)
-        {
-            //Hide();
-            //StatisticsPage _statisticsPage = new StatisticsPage();
-            //_statisticsPage.Show();
-        }
-
-        private void btnWorkingHours_Click(object sender, EventArgs e)
-        {
-            //Hide();
-            //WorkingHoursPage _workingHoursPage = new WorkingHoursPage();
-            //_workingHoursPage.Show();
-        }
-
-        private void btnHolidays_Click(object sender, EventArgs e)
-        {
-            //Hide();
-            //HolidaysPage _holidaysPage = new HolidaysPage();
-            //_holidaysPage.Show();
-        }
-
         private void pHeader_MouseUp(object sender, MouseEventArgs e)
         {
-            _togMove = 0;
+            _bTogMove = false;
         }
 
         private void pHeader_MouseDown(object sender, MouseEventArgs e)
         {
-            _togMove = 1;
-            _mValX = e.X;
-            _mValY = e.Y;
+            _bTogMove = true;
+            _iValX = e.X;
+            _iValY = e.Y;
         }
 
         private void pHeader_MouseMove(object sender, MouseEventArgs e)
         {
-            if (_togMove == 1)
+            if (_bTogMove)
             {
-                SetDesktopLocation(MousePosition.X - _mValX, MousePosition.Y - _mValY);
+                SetDesktopLocation(MousePosition.X - _iValX, MousePosition.Y - _iValY);
             }
         }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            Rectangle borderRectangle = new Rectangle(0, 0, ClientRectangle.Width - 1, ClientRectangle.Height - 1);
+            e.Graphics.DrawRectangle(Pens.Black, borderRectangle);
+            base.OnPaint(e);
+        }
+
     }
 }

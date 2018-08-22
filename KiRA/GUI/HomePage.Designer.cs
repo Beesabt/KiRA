@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.pHeader = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnMinimalize = new System.Windows.Forms.Button();
@@ -60,31 +59,31 @@
             // 
             // btnExit
             // 
-            this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
+            this.btnExit.BackgroundImage = global::KiRA.Properties.Resources.close_icon_white_26;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(1000, 0);
+            this.btnExit.Location = new System.Drawing.Point(980, 0);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(30, 30);
+            this.btnExit.Size = new System.Drawing.Size(50, 30);
             this.btnExit.TabIndex = 2;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnMinimalize
             // 
-            this.btnMinimalize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimalize.BackgroundImage")));
+            this.btnMinimalize.BackgroundImage = global::KiRA.Properties.Resources.subtract_icon_white_26;
             this.btnMinimalize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnMinimalize.FlatAppearance.BorderSize = 0;
             this.btnMinimalize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnMinimalize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnMinimalize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimalize.Location = new System.Drawing.Point(970, 0);
+            this.btnMinimalize.Location = new System.Drawing.Point(930, 0);
             this.btnMinimalize.Name = "btnMinimalize";
-            this.btnMinimalize.Size = new System.Drawing.Size(30, 30);
+            this.btnMinimalize.Size = new System.Drawing.Size(50, 30);
             this.btnMinimalize.TabIndex = 3;
             this.btnMinimalize.UseVisualStyleBackColor = true;
             this.btnMinimalize.Click += new System.EventHandler(this.btnMinimalize_Click);
@@ -105,10 +104,9 @@
             // 
             this.pFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.pFooter.Controls.Add(this.lFooter);
-            this.pFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pFooter.Location = new System.Drawing.Point(0, 630);
+            this.pFooter.Location = new System.Drawing.Point(1, 629);
             this.pFooter.Name = "pFooter";
-            this.pFooter.Size = new System.Drawing.Size(1030, 20);
+            this.pFooter.Size = new System.Drawing.Size(1028, 20);
             this.pFooter.TabIndex = 6;
             // 
             // lFooter
