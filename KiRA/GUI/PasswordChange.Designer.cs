@@ -157,6 +157,7 @@
             this.Controls.Add(this.lNewPassword);
             this.Controls.Add(this.lNewPasswordAgain);
             this.Controls.Add(this.tbNewPassword);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "PasswordChange";
             this.Size = new System.Drawing.Size(1030, 535);
             ((System.ComponentModel.ISupportInitialize)(this.pbPasswordInformation)).EndInit();
