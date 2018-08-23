@@ -9,11 +9,12 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>KiRA</RootNamespace>
     <AssemblyName>KiRA</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,26 +37,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.SQLite, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Data.SQLite.Core.1.0.108.0\lib\net451\System.Data.SQLite.dll</HintPath>
+    <Reference Include="System.Data.SQLite, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.109.1\lib\net46\System.Data.SQLite.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Data.SQLite.EF6, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.108.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.109.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Data.SQLite.Linq, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.108.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.109.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Xml.Linq" />
@@ -69,10 +70,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessLogicLayer\Home.cs" />
     <Compile Include="BusinessLogicLayer\Login.cs" />
     <Compile Include="BusinessLogicLayer\LogInfo.cs" />
     <Compile Include="BusinessLogicLayer\Settings.cs" />
+    <Compile Include="BusinessLogicLayer\TaskModification.cs" />
     <Compile Include="BusinessLogicLayer\Texts.cs" />
     <Compile Include="DataAccessLayer\DatabaseHandler.cs" />
     <Compile Include="GUI\Dummy.cs">
@@ -80,6 +81,12 @@
     </Compile>
     <Compile Include="GUI\Dummy.Designer.cs">
       <DependentUpon>Dummy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EmailChange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\EmailChange.designer.cs">
+      <DependentUpon>EmailChange.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\HomePage.cs">
       <SubType>Form</SubType>
@@ -99,6 +106,12 @@
     <Compile Include="GUI\PasswordChange.designer.cs">
       <DependentUpon>PasswordChange.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\PersonalDataChangePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PersonalDataChangePage.designer.cs">
+      <DependentUpon>PersonalDataChangePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\PersonalInformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,11 +130,11 @@
     <Compile Include="GUI\TaskManager.designer.cs">
       <DependentUpon>TaskManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\UsernameChange.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="GUI\TaskModificationPage.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\UsernameChange.designer.cs">
-      <DependentUpon>UsernameChange.cs</DependentUpon>
+    <Compile Include="GUI\TaskModificationPage.designer.cs">
+      <DependentUpon>TaskModificationPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -131,6 +144,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="ValueObjects\Person.cs" />
+    <None Include="ApplicationFiles\DataBase\KiRA_Database.db" />
+    <None Include="packages.config" />
+    <None Include="Resources\subtract_icon_white_26.png" />
+    <None Include="Resources\restore_icon_white_26.png" />
+    <None Include="Resources\close_icon_white_26.png" />
     <None Include="Resources\piechart_icon_white_100.png" />
     <None Include="Resources\beach_icon_white_50.png" />
     <None Include="Resources\settings_icon_white_50.png" />
@@ -138,9 +156,11 @@
     <None Include="Resources\back_icon_white_50.png" />
     <None Include="Resources\info_icon_white_50.png" />
     <None Include="Resources\lock_icon_white_50.png" />
-    <None Include="Resources\user_icon_white_50.png" />
     <None Include="Resources\task_icon_white_50.png" />
     <None Include="Resources\info_icon.png" />
+    <EmbeddedResource Include="GUI\EmailChange.resx">
+      <DependentUpon>EmailChange.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PasswordChange.resx">
       <DependentUpon>PasswordChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PersonalDataChangePage.resx">
+      <DependentUpon>PersonalDataChangePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PersonalInformation.resx">
       <DependentUpon>PersonalInformation.cs</DependentUpon>
@@ -159,18 +182,14 @@
     <EmbeddedResource Include="GUI\TaskManager.resx">
       <DependentUpon>TaskManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\UsernameChange.resx">
-      <DependentUpon>UsernameChange.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\TaskModificationPage.resx">
+      <DependentUpon>TaskModificationPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Content Include="ApplicationFiles\DataBase\KiRA_Database.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -188,12 +207,12 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\packages\System.Data.SQLite.Core.1.0.108.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.108.0\build\net451\System.Data.SQLite.Core.targets')" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.109.1\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.109.1\build\net46\System.Data.SQLite.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.108.0\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.108.0\build\net451\System.Data.SQLite.Core.targets'))" />
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.109.1\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.109.1\build\net46\System.Data.SQLite.Core.targets'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
